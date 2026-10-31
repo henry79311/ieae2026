@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VIEMAG 展覽手冊 · IEAE Hanoi 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14212b; --ink2:#4a5a66; --mute:#7d8b95; --line:#dfe5e9; --bg:#f4f6f7; --card:#fff;
+  --brand:#0e5e6f; --brand2:#127a8f; --accent:#e8a33d; --ok:#2f8a4e; --warn:#b5651d; --tbd-bg:#fff3d6; --tbd-ink:#8a5a00;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:"Be Vietnam Pro","Noto Sans TC",system-ui,sans-serif;color:var(--ink);background:var(--bg);font-size:15px;line-height:1.55}
+header{background:var(--brand);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.hwrap{max-width:1100px;margin:0 auto;padding:12px 16px 0}
+.top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-weight:700;letter-spacing:.14em;font-size:20px}
+.logo small{display:block;font-weight:400;letter-spacing:0;font-size:12px;opacity:.8}
+.site{margin-left:auto;color:#fff;text-decoration:none;font-size:13px;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:5px 12px}
+.site:hover{background:rgba(255,255,255,.14)}
+.langs{display:flex;background:rgba(255,255,255,.14);border-radius:999px;padding:3px}
+.langs button{border:0;background:transparent;color:#fff;font:inherit;font-size:13px;padding:5px 12px;border-radius:999px;cursor:pointer}
+.langs button.on{background:#fff;color:var(--brand);font-weight:600}
+nav{display:flex;gap:2px;overflow-x:auto;margin-top:10px;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{color:rgba(255,255,255,.78);text-decoration:none;padding:9px 14px;font-size:14px;white-space:nowrap;border-bottom:3px solid transparent}
+nav a.on{color:#fff;border-color:var(--accent);font-weight:600}
+main{max-width:1100px;margin:0 auto;padding:18px 16px 60px}
+section{display:none}
+section.on{display:block}
+h2{font-size:20px;margin:6px 0 4px}
+h3{font-size:16px;margin:22px 0 8px;color:var(--brand)}
+.sub{color:var(--ink2);margin:0 0 14px;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:12px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14px}
+.kv b{color:var(--ink2);font-weight:500}
+.tbd{display:inline-block;background:var(--tbd-bg);color:var(--tbd-ink);border:1px dashed #e0b45c;border-radius:4px;padding:0 5px;font-size:.88em;font-weight:500}
+.chip{display:inline-block;font-size:12px;padding:1px 8px;border-radius:999px;white-space:nowrap}
+.chip.sale{background:#e3f3e8;color:var(--ok)}
+.chip.soon{background:#fdf0dc;color:var(--warn)}
+.chip.cat{background:#e6f0f2;color:var(--brand)}
+ol.flow{counter-reset:s;list-style:none;padding:0;margin:0}
+ol.flow li{counter-increment:s;position:relative;padding:0 0 12px 40px}
+ol.flow li:before{content:counter(s);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--brand);color:#fff;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center}
+ol.flow li b{display:block}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+.bc{border-left:4px solid var(--accent)}
+.bb{border-left:4px solid var(--brand2)}
+/* FAQ */
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+input[type=search],input.own{font:inherit;border:1px solid var(--line);border-radius:8px;padding:8px 11px;background:#fff}
+input[type=search]{flex:1;min-width:200px}
+.fbtn{border:1px solid var(--line);background:#fff;font:inherit;font-size:13px;padding:6px 11px;border-radius:999px;cursor:pointer;color:var(--ink2)}
+.fbtn.on{background:var(--brand);border-color:var(--brand);color:#fff}
+details.faq{background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:8px}
+details.faq summary{cursor:pointer;padding:12px 14px;font-weight:600;list-style:none;display:flex;gap:10px;align-items:flex-start}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary .n{color:var(--mute);font-weight:500;min-width:24px}
+details.faq summary .q{flex:1}
+details.faq[open] summary{border-bottom:1px solid var(--line)}
+.ans{padding:12px 14px 14px 48px}
+.ans p{margin:0 0 6px}
+.ans .other{color:var(--mute);font-size:13px;margin-top:8px;border-top:1px dashed var(--line);padding-top:8px}
+.tip{font-size:13px;color:var(--warn);margin-top:6px}
+/* tables */
+.tw{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#eef3f5;font-weight:600;font-size:13px;color:var(--ink2);white-space:nowrap;position:sticky;top:0}
+td.num,th.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+td.sku{font-weight:700;color:var(--brand);white-space:nowrap}
+td.sku a,a.pl{color:var(--brand);text-decoration:none}
+td.sku a:after{content:" ↗";font-weight:400;font-size:11px}
+a.pl:hover,td.sku a:hover{text-decoration:underline}
+.qr{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.qr svg{border:1px solid var(--line);border-radius:8px;flex:none}
+td .spec{color:var(--ink2);font-size:13px;margin-top:2px}
+tr.done td{background:#f2f8f3}
+tr.done td.nm{text-decoration:line-through;color:var(--mute)}
+.mkt{font-size:12px;color:var(--mute)}
+tfoot td{font-weight:600;background:#fafbfb}
+/* checklist */
+.ckhead{display:flex;align-items:center;gap:10px;margin:22px 0 8px}
+.ckhead h3{margin:0}
+.bar{flex:1;height:6px;background:#e3e8eb;border-radius:3px;overflow:hidden;max-width:220px}
+.bar i{display:block;height:100%;background:var(--ok);width:0}
+.cnt{font-size:13px;color:var(--mute)}
+input[type=checkbox]{width:19px;height:19px;accent-color:var(--ok);cursor:pointer}
+input.own{padding:4px 8px;width:110px;font-size:13px}
+.note{font-size:12.5px;color:var(--mute)}
+.new{font-size:11px;background:#e6f0f2;color:var(--brand);border-radius:4px;padding:0 5px;margin-left:4px}
+.legend{font-size:13px;color:var(--ink2);margin:0 0 12px}
+.btnrow{display:flex;gap:8px;margin:6px 0 4px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer}
+table.edt td{padding:5px 6px;vertical-align:middle}
+input.ed,input.ced{font:inherit;font-size:13.5px;border:1px solid transparent;border-radius:6px;padding:5px 6px;background:transparent;width:100%;min-width:0;color:inherit}
+input.ced:hover,input.ed:hover{border-color:var(--line)}
+input.ced:focus,input.ed:focus{border-color:var(--brand2);background:#fff;outline:none}
+input.ced.empty,input.ed.empty{background:var(--tbd-bg);border:1px dashed #e0b45c}
+input.ed[type=number]{text-align:right}
+.w-sku{width:74px!important;font-weight:700;color:var(--brand)!important}.w-name{min-width:270px!important}.w-num{width:64px!important}.w-src{min-width:150px!important}.w-size{min-width:120px!important}.w-note{min-width:190px!important}
+input.w-qty{width:110px!important}input.w-own{width:110px!important}
+tr.done input.w-name{text-decoration:line-through;color:var(--mute)}
+button.del{border:0;background:transparent;color:var(--mute);font-size:15px;cursor:pointer;padding:4px 8px;border-radius:6px}
+button.del:hover{background:#fbe9e7;color:#b3261e}
+.btn.pri{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn.warn{background:#fbe9e7;border-color:#e8a59c;color:#b3261e}
+footer{text-align:center;color:var(--mute);font-size:12px;padding:20px}
+</style>
+</head>
+<body>
+<header>
+  <div class="hwrap">
+    <div class="top">
+      <div class="logo">VIEMAG<small data-t="hdr"></small></div>
+      <a class="site" href="https://viemag.biz" target="_blank" rel="noopener">viemag.biz ↗</a>
+      <div class="langs" role="group">
+        <button data-lang="zh">中文</button><button data-lang="en">EN</button><button data-lang="vi">VI</button>
+      </div>
+    </div>
+    <nav id="nav">
+      <a href="#overview" data-v="overview"></a>
+      <a href="#faq" data-v="faq"></a>
+      <a href="#price" data-v="price"></a>
+      <a href="#samples" data-v="samples"></a>
+      <a href="#checklist" data-v="checklist"></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="v-overview"></section>
+  <section id="v-faq"></section>
+  <section id="v-price"></section>
+  <section id="v-samples"></section>
+  <section id="v-checklist"></section>
+</main>
+<footer data-t="foot"></footer>
+
+<script>
+/* ---------- storage (safe) ---------- */
+const S={get(k,d){try{const v=localStorage.getItem('vmx_'+k);return v===null?d:JSON.parse(v)}catch(e){return d}},
+         set(k,v){try{localStorage.setItem('vmx_'+k,JSON.stringify(v))}catch(e){}}};
+let L=S.get('lang','zh');
+const T=o=>o==null?'':(typeof o==='string'?o:(o[L]??o.zh??''));
+/* ⟦...⟧ = 待確認 marker */
+const fmt=s=>T(s).replace(/⟦(.*?)⟧/g,'<span class="tbd">$1</span>').replace(/viemag\.biz/g,'<a class="pl" href="https://viemag.biz" target="_blank" rel="noopener">viemag.biz</a>');
+const nf=n=>n.toLocaleString('en-US');
+const FX=25834.040863;
+
+/* ---------- UI strings ---------- */
+const UI={
+ hdr:{zh:'IEAE Hanoi 2026 展覽工作手冊',en:'IEAE Hanoi 2026 Booth Handbook',vi:'Sổ tay gian hàng IEAE Hà Nội 2026'},
+ overview:{zh:'總覽與培訓',en:'Overview & Training',vi:'Tổng quan & Đào tạo'},
+ faq:{zh:'客人常見問題',en:'Customer FAQ',vi:'Câu hỏi thường gặp'},
+ price:{zh:'報價單',en:'Price List',vi:'Bảng giá'},
+ samples:{zh:'樣品清單',en:'Sample List',vi:'Danh sách mẫu'},
+ checklist:{zh:'展覽物品清單',en:'Booth Checklist',vi:'Danh mục vật dụng'},
+ foot:{zh:'VIEMAG ｜ 黃底虛線標示 = 待確認資訊，請勿對客人承諾',en:'VIEMAG | Yellow dashed tags = to be confirmed, do not promise to customers',vi:'VIEMAG | Nhãn vàng viền nét đứt = chưa xác nhận, không cam kết với khách'},
+ search:{zh:'搜尋問題或關鍵字…',en:'Search questions or keywords…',vi:'Tìm câu hỏi hoặc từ khóa…'},
+ all:{zh:'全部',en:'All',vi:'Tất cả'},
+ other:{zh:'其他語言',en:'Other languages',vi:'Ngôn ngữ khác'},
+ expand:{zh:'全部展開',en:'Expand all',vi:'Mở tất cả'},
+ collapse:{zh:'全部收合',en:'Collapse all',vi:'Thu gọn'},
+ reset:{zh:'清除勾選',en:'Clear ticks',vi:'Xóa đánh dấu'},
+ owner:{zh:'負責人',en:'Owner',vi:'Phụ trách'},
+};
+
+/* ---------- PRODUCTS (from viemag price-scan 2026-10-29) ---------- */
+const CAT={car:{zh:'車用',en:'Car',vi:'Ô tô'},desk:{zh:'桌面/多用途',en:'Desk / Multi',vi:'Bàn / Đa năng'},gym:{zh:'健身',en:'Gym',vi:'Gym'},travel:{zh:'旅行/戶外',en:'Travel / Outdoor',vi:'Du lịch / Ngoài trời'},wear:{zh:'穿戴',en:'Wearable',vi:'Đeo tay'}};
+const P=[
+ {sku:'V01',cu:3.5,cat:'car',msrp:268000,st:'sale',mk:[162000,161699,250000],
+  n:{zh:'磁吸冷氣出風口支架',en:'MagSafe Air-Vent Mount',vi:'Giá đỡ MagSafe gắn cửa gió điều hòa'},
+  s:{zh:'出風口夾＋延伸臂＋17mm 球頭＋MagSafe 磁吸盤；360° 旋轉。越南北寧生產',en:'Vent clip + extension arm + 17 mm ball joint + MagSafe disc; 360°. Made in Bac Ninh, Vietnam',vi:'Kẹp cửa gió + tay nối dài + khớp cầu 17 mm + đĩa hút từ MagSafe; xoay 360°. Sản xuất tại Bắc Ninh, Việt Nam'}},
+ {sku:'V02',cu:4.6,cat:'car',msrp:328000,st:'sale',mk:[518702,378825,999999],
+  n:{zh:'薄型折疊真空磁吸支架',en:'Ultra-thin Foldable Vacuum Magnetic Mount',vi:'Giá đỡ từ tính hút chân không siêu mỏng, gấp gọn'},
+  s:{zh:'超薄鋅合金；N54 磁環；旋鈕鎖定真空吸盤；360°＋兩段 180° 折疊；76×59×20mm / 136g',en:'Ultra-thin zinc alloy; N54 magnet ring; knob-lock vacuum base; 360° + two 180° hinges; 76×59×20 mm / 136 g',vi:'Hợp kim kẽm siêu mỏng; vòng nam châm N54; đế hút chân không khóa núm xoay; 360° + hai khớp gấp 180°; 76×59×20 mm / 136 g'}},
+ {sku:'V03',cu:3.6,cat:'car',msrp:268000,st:'sale',mk:[168000,164581,172458],
+  n:{zh:'黏貼式折疊磁吸支架',en:'Adhesive Foldable Magnetic Mount',vi:'Giá đỡ từ tính gấp gọn (đế dán)'},
+  s:{zh:'黏貼底座；可完全折平；360°＋兩段 180°；尺寸 ⟦待確認⟧',en:'Adhesive base; folds completely flat; 360° + two 180° hinges; size ⟦TBC⟧',vi:'Đế dán; gấp phẳng hoàn toàn; 360° + hai khớp 180°; kích thước ⟦chưa xác nhận⟧'}},
+ {sku:'V05',cu:4.6,cat:'car',msrp:328000,st:'soon',mk:[206000,156000,277000],
+  n:{zh:'旋轉折疊磁吸支架',en:'Rotating Foldable MagSafe Mount',vi:'Giá đỡ MagSafe xoay và gấp gọn'},
+  s:{zh:'薄片 87×60×8mm；270° 旋轉；可折平；3M 金屬黏貼底座；60g',en:'Slim plate 87×60×8 mm; 270° rotation; folds flat; 3M adhesive metal base; 60 g',vi:'Tấm mỏng 87×60×8 mm; xoay 270°; gấp phẳng; đế kim loại dán 3M; 60 g'}},
+ {sku:'V06',cu:7,cat:'car',msrp:468000,st:'soon',mk:[389000,290000,537069],
+  n:{zh:'真空夾吸兩用支架',en:'Clamp + Magnetic Dual-mode Vacuum Mount',vi:'Giá đỡ hai chế độ kẹp và hút chân không'},
+  s:{zh:'夾持／磁吸兩種模式；奈米膠真空吸盤；360°；81×64×44.5mm / 160g',en:'Clamp or magnetic mode; nano-gel vacuum base; 360°; 81×64×44.5 mm / 160 g',vi:'Hai chế độ kẹp và hút từ; đế hút chân không gel nano; 360°; 81×64×44.5 mm / 160 g'}},
+ {sku:'V07',cu:7.9,cat:'car',msrp:528000,st:'soon',mk:[250000,246400,909700],
+  n:{zh:'真空折疊磁吸支架',en:'Vacuum Magnetic Mount, Folding Arm',vi:'Giá đỡ từ tính hút chân không, tay gấp'},
+  s:{zh:'雙節折疊臂＋機械式真空吸盤（奈米膠）；展開最高 177mm；官網尺寸/重量 ⟦兩處不一致，待確認⟧',en:'Two-section folding arm + mechanical vacuum base with nano gel; max height 177 mm; size/weight ⟦inconsistent on website, TBC⟧',vi:'Tay gấp hai thanh + đế hút chân không cơ học có keo nano; cao tối đa 177 mm; kích thước/trọng lượng ⟦website không thống nhất⟧'}},
+ {sku:'V08',cu:7.9,cat:'car',msrp:528000,st:'sale',mk:[421450,339000,445000],
+  n:{zh:'真空延伸磁吸支架',en:'Vacuum Magnetic Mount, Extended Aluminium Arm',vi:'Giá đỡ từ tính hút chân không, tay nối dài'},
+  s:{zh:'鋁合金雙節延伸臂；16 顆 N52 磁鐵；70mm 真空吸盤；最高 208mm',en:'Aluminium two-section extension arm; 16 × N52 magnets; 70 mm vacuum base; max height 208 mm',vi:'Tay hai thanh nối dài hợp kim nhôm; 16 nam châm N52; đế hút chân không 70 mm; cao tối đa 208 mm'}},
+ {sku:'V09',cu:3.68,cat:'car',msrp:368000,st:'soon',mk:[359000,159000,399000],
+  n:{zh:'三軸真空磁吸支架',en:'3-Axis Vacuum Magnetic Mount',vi:'Giá đỡ từ tính hút chân không 3 trục'},
+  s:{zh:'三軸（180° 折疊＋360° 旋轉）；一轉鎖定真空吸盤；61×61×40mm / 131g',en:'3 axes (180° fold + 360° rotation); one-twist vacuum lock; 61×61×40 mm / 131 g',vi:'Ba trục (gập 180° + xoay 360°); đế hút chân không khóa một lần xoay; 61×61×40 mm / 131 g'}},
+ {sku:'VQ04',cu:7.4,cat:'car',msrp:528000,st:'soon',mk:[370200,316850,710500],
+  n:{zh:'無線充電旋轉折疊磁吸支架',en:'15W Wireless Charging Rotating Foldable Mount',vi:'Giá đỡ sạc không dây MagSafe xoay và gấp gọn'},
+  s:{zh:'15W 無線充電；可折平；270° 旋轉；附 2 片 3M 金屬底座；89×60×13mm / 84g',en:'15 W wireless charging; folds flat; 270°; 2 × 3M metal bases; 89×60×13 mm / 84 g',vi:'Sạc không dây 15W; gấp phẳng; xoay 270°; 2 đế kim loại 3M; 89×60×13 mm / 84 g'}},
+ {sku:'P03',cu:8.4,cat:'desk',msrp:568000,st:'sale',mk:[304680,293550,315810],
+  n:{zh:'多功能萬用支架',en:'3-in-1 Multi-purpose Stand',vi:'Giá đỡ đa năng 3 trong 1'},
+  s:{zh:'鋁合金 X 型四腳可折；手機／平板／筆電通用；8 段高度；收合 58×181.5×21mm / 約 150g',en:'Aluminium X-shaped folding legs; phone / tablet / laptop; 8 height levels; folded 58×181.5×21 mm / ~150 g',vi:'Hợp kim nhôm, bốn chân chữ X gấp gọn; điện thoại / máy tính bảng / laptop; 8 mức cao; gấp 58×181.5×21 mm / ~150 g'}},
+ {sku:'P02',cu:7.5,cat:'desk',msrp:468000,st:'sale',mk:null,
+  n:{zh:'自由塑形磁吸支架',en:'Flexible Bendable Magnetic Mount',vi:'Giá đỡ MagSafe đế uốn tạo hình linh hoạt'},
+  s:{zh:'矽膠可彎底座可纏繞管柱；N52；360°；附金屬貼片；102×60×33mm / 101g',en:'Bendable silicone base wraps around poles; N52; 360°; metal plate included; 102×60×33 mm / 101 g',vi:'Đế silicone uốn cong ôm quanh ống; N52; 360°; kèm miếng kim loại dán; 102×60×33 mm / 101 g'}},
+ {sku:'P05',cu:4.5,cat:'gym',msrp:298000,st:'soon',mk:[155100,150000,440927],
+  n:{zh:'長型磁吸健身支架－8 磁款',en:'Long-base Gym MagSafe Mount – 8 magnets',vi:'Giá đỡ tập gym MagSafe đế dài – 8 nam châm'},
+  s:{zh:'長型底座，8 顆磁鐵雙排；N52；吸附健身器材；68×Ø60×36mm / 95g',en:'Long base, 8 magnets in two rows; N52; sticks to gym equipment; 68×Ø60×36 mm / 95 g',vi:'Đế dài, 8 nam châm xếp hai hàng; N52; hút vào thiết bị gym; 68×Ø60×36 mm / 95 g'}},
+ {sku:'P06',cu:4.2,cat:'gym',msrp:268000,st:'sale',mk:[147400,142560,285120],
+  n:{zh:'長型磁吸健身支架－4 磁款',en:'Long-base Gym MagSafe Mount – 4 magnets',vi:'Giá đỡ tập gym MagSafe đế dài – 4 nam châm'},
+  s:{zh:'長型底座，4 顆磁鐵；N52；吸附健身器材；68×Ø60×36mm / 80g',en:'Long base, 4 magnets; N52; sticks to gym equipment; 68×Ø60×36 mm / 80 g',vi:'Đế dài, 4 nam châm; N52; hút vào thiết bị gym; 68×Ø60×36 mm / 80 g'}},
+ {sku:'P01',cu:5.5,cat:'travel',msrp:368000,st:'soon',mk:[222888,192192,335000],
+  n:{zh:'雙磁吸旅行支架',en:'Dual-sided Magnetic Travel Mount',vi:'Giá đỡ du lịch MagSafe hút từ hai mặt'},
+  s:{zh:'鋅合金；D 型環夾＋背面磁鐵；雙軸 360°；1/4 吋螺孔；105×59×38mm / 115g',en:'Zinc alloy; D-ring clip + rear magnet; dual 360° axes; 1/4" thread; 105×59×38 mm / 115 g',vi:'Hợp kim kẽm; kẹp vòng chữ D + nam châm mặt sau; hai trục 360°; ren 1/4 inch; 105×59×38 mm / 115 g'}},
+ {sku:'P04',cu:9,cat:'travel',msrp:568000,st:'soon',mk:[474000,399000,2203074],
+  n:{zh:'多功能折疊磁吸隨身支架',en:'Foldable Mini-tripod Magnetic Mount',vi:'Giá đỡ từ tính đa năng gấp gọn mang theo'},
+  s:{zh:'鋁合金迷你三腳架＋登山扣；N52；360°；100×58×14mm / 約 104g',en:'Aluminium foldable mini tripod + carabiner; N52; 360°; 100×58×14 mm / ~104 g',vi:'Chân máy mini ba chân hợp kim nhôm gấp gọn + móc carabiner; N52; 360°; 100×58×14 mm / ~104 g'}},
+ {sku:'P07',cat:'wear',msrp:null,st:null,mk:null,
+  n:{zh:'磁吸手錶錶帶',en:'Magnetic Watch Strap',vi:'Dây đồng hồ từ tính'},
+  s:{zh:'⟦規格與售價待確認（報價檔未列）⟧',en:'⟦Specs & price TBC (not in price file)⟧',vi:'⟦Thông số & giá chưa xác nhận (không có trong bảng giá)⟧'}},
+];
+const PM=Object.fromEntries(P.map(p=>[p.sku,p]));
+const URL=sku=>'https://viemag.biz/product.html?sku='+sku;
+const WP=[['products.html',{zh:'全部產品',en:'All products',vi:'Sản phẩm'}],['scenarios.html',{zh:'情境搭配',en:'Pairing guide',vi:'Gợi ý theo tình huống'}],['why-viemag.html',{zh:'為什麼選 VIEMAG',en:'Why VIEMAG',vi:'Vì sao chọn VIEMAG'}],['dealers.html',{zh:'經銷商招募',en:'For dealers',vi:'Dành cho đại lý'}],['about.html',{zh:'關於我們',en:'About',vi:'Giới thiệu'}]];
+
+/* ---------- FAQ ---------- */
+const FC={co:{zh:'公司與品牌',en:'Company & Brand',vi:'Công ty & Thương hiệu'},pr:{zh:'價格與訂購',en:'Price & Ordering',vi:'Giá & Đặt hàng'},us:{zh:'使用與技術',en:'Usage & Technical',vi:'Sử dụng & Kỹ thuật'},ln:{zh:'產品線',en:'Product Range',vi:'Dòng sản phẩm'}};
+const FAQ=[
+ {c:'co',q:{zh:'你們公司在哪裡？',en:'Where is your company located?',vi:'Công ty bạn ở đâu?'},
+  a:{zh:'VIEMAG 是越南品牌，由越南公司 PERIPOWER VIETNAM CO., LTD. 代理，公司在越南北寧（1st Floor, Plot No. 394, Map Sheet No. 3, Tran Quoc Tang Street, Vo Cuong Ward, Bac Ninh City, Vietnam），電話 0345 026 866。產品資訊都可以在官網 viemag.biz 查看。',
+     en:'VIEMAG is a Vietnamese brand represented by PERIPOWER VIETNAM CO., LTD., a Vietnamese company based in Bac Ninh (1st Floor, Plot No. 394, Map Sheet No. 3, Tran Quoc Tang Street, Vo Cuong Ward, Bac Ninh City, Vietnam), tel. 0345 026 866. Full product information is on our website viemag.biz.',
+     vi:'VIEMAG là thương hiệu Việt Nam do CÔNG TY TNHH PERIPOWER VIỆT NAM (PERIPOWER VIETNAM CO., LTD.), một công ty Việt Nam, phân phối; trụ sở tại Tầng 1, Thửa đất số 394, Tờ bản đồ số 3, đường Trần Quốc Tảng, phường Võ Cường, thành phố Bắc Ninh, Việt Nam, điện thoại 0345 026 866. Thông tin sản phẩm có trên website viemag.biz.'}},
+ {c:'co',q:{zh:'VIEMAG 是哪裡的品牌？是中國品牌嗎？',en:'Where is VIEMAG from? Is it a Chinese brand?',vi:'VIEMAG là thương hiệu nước nào? Có phải hàng Trung Quốc không?'},
+  a:{zh:'不是。VIEMAG 是越南品牌，專注 MagSafe 磁吸支架，產品是依越南使用者的習慣挑選與開發的，涵蓋車用、桌面、健身、旅行。',
+     en:'No. VIEMAG is a Vietnamese brand focused on MagSafe magnetic mounts, selected and developed around how people in Vietnam use their phones — for car, desk, gym and travel.',
+     vi:'Không. VIEMAG là thương hiệu Việt Nam, chuyên giá đỡ từ tính MagSafe, sản phẩm được chọn lọc và phát triển theo thói quen của người dùng Việt Nam — cho ô tô, bàn làm việc, gym và du lịch.'}},
+ {c:'co',q:{zh:'公司叫 PERIPOWER VIETNAM，跟 peripower 品牌有什麼關係？',en:'Your company is PERIPOWER VIETNAM — how is that related to the peripower brand?',vi:'Công ty tên PERIPOWER VIETNAM — có liên quan gì đến thương hiệu peripower?'},
+  a:{zh:'PERIPOWER VIETNAM 是一間越南公司，代理多個品牌，VIEMAG 和 peripower 都是其中之一。這次展覽我們展出的是 VIEMAG。',
+     en:'PERIPOWER VIETNAM is a Vietnamese company that represents several brands — VIEMAG and peripower are two of them. At this show we are presenting VIEMAG.',
+     vi:'PERIPOWER VIETNAM là một công ty Việt Nam phân phối nhiều thương hiệu, trong đó có VIEMAG và peripower. Tại triển lãm này chúng tôi giới thiệu VIEMAG.'},
+  tip:{zh:'只在客人問到時回答，不要主動提；也不要談 peripower 的來源。',en:'Answer only when asked; don\'t bring it up or discuss peripower\'s origin.',vi:'Chỉ trả lời khi khách hỏi; không chủ động nhắc, không nói về nguồn gốc peripower.'}},
+ {c:'co',q:{zh:'產品在哪裡生產？',en:'Where are the products made?',vi:'Sản phẩm được sản xuất ở đâu?'},
+  a:{zh:'冷氣出風口支架 V01 在越南北寧生產；其他型號由長期合作的工廠依 VIEMAG 規格生產，經過品管檢驗才出貨。產地以包裝標示為準。',
+     en:'The air-vent mount V01 is made in Bac Ninh, Vietnam. Other models are made by long-term partner factories to VIEMAG specifications and pass QC before shipping. Country of origin is shown on each package.',
+     vi:'Giá đỡ cửa gió V01 được sản xuất tại Bắc Ninh, Việt Nam. Các mẫu khác do nhà máy đối tác lâu năm sản xuất theo thông số của VIEMAG và qua kiểm tra chất lượng (QC) trước khi xuất hàng. Xuất xứ ghi rõ trên bao bì.'},
+  tip:{zh:'客人追問其他型號產地時照實回答，以包裝標示為準，不可說全部越南製造。',en:'If asked about other models\' origin, answer truthfully per the package label — never claim everything is made in Vietnam.',vi:'Nếu khách hỏi xuất xứ các mẫu khác, trả lời trung thực theo nhãn bao bì — không được nói tất cả đều sản xuất tại Việt Nam.'}},
+ {c:'co',q:{zh:'這些產品網路上早就有了，你們為什麼現在才開始賣？',en:'Products like these have been online for years — why are you only selling now?',vi:'Sản phẩm kiểu này trên mạng có lâu rồi, sao bây giờ các bạn mới bán?'},
+  a:{zh:'VIEMAG 是新品牌，品牌理念是「Value · Innovation · Excellence」（價值・創新・卓越）。越南市場上磁吸支架很多，但品質落差很大，所以我們只推出經過磁力、震動、溫升和耐久壽命測試的產品，給越南消費者一個可以信賴的選擇。',
+     en:'VIEMAG is a new brand built on "Value · Innovation · Excellence". There are many magnetic mounts on the Vietnamese market but quality varies a lot, so we only offer products tested for magnetic force, vibration, thermal rise and lifecycle — a choice Vietnamese consumers can trust.',
+     vi:'VIEMAG là thương hiệu mới với tinh thần "Value · Innovation · Excellence" (Giá trị · Đổi mới · Xuất sắc). Trên thị trường có rất nhiều giá đỡ từ tính nhưng chất lượng chênh lệch lớn, nên chúng tôi chỉ đưa ra sản phẩm đã kiểm tra lực hút, độ rung, độ tăng nhiệt và tuổi thọ — lựa chọn đáng tin cậy cho người tiêu dùng Việt Nam.'}},
+ {c:'co',q:{zh:'你們的產品有出口嗎？',en:'Do you export?',vi:'Sản phẩm của các bạn có xuất khẩu không?'},
+  a:{zh:'VIEMAG 目前專注越南市場。如果您有海外經銷需求，請留下名片和需求，我們展後會跟您聯繫。',
+     en:'VIEMAG currently focuses on the Vietnamese market. If you are interested in overseas distribution, please leave your card and requirements and we will contact you after the show.',
+     vi:'VIEMAG hiện tập trung vào thị trường Việt Nam. Nếu anh/chị có nhu cầu phân phối ở nước ngoài, vui lòng để lại danh thiếp và yêu cầu, chúng tôi sẽ liên hệ sau triển lãm.'},
+  tip:{zh:'收名片並在洽談記錄本標註「海外」，展後交給 Henry。',en:'Take the card, mark "overseas" in the log, and hand it to Henry after the show.',vi:'Lấy danh thiếp, ghi "nước ngoài" trong sổ, sau triển lãm chuyển cho Henry.'}},
+ {c:'co',q:{zh:'可以做 OEM/ODM 或印我們的 logo 嗎？',en:'Can you do OEM/ODM or print our logo?',vi:'Có làm OEM/ODM hoặc in logo của chúng tôi được không?'},
+  a:{zh:'VIEMAG 是零售／經銷品牌，展位上不承接 OEM/ODM。不過我們可以記錄您的需求，請留下名片、產品類型和預估數量，展後會有人跟您聯繫。',
+     en:'VIEMAG is a retail / distribution brand and does not take OEM/ODM orders at this booth. We can note your request though — please leave your card, product type and estimated quantity, and someone will contact you after the show.',
+     vi:'VIEMAG là thương hiệu bán lẻ / phân phối, gian hàng không nhận OEM/ODM. Tuy nhiên chúng tôi có thể ghi nhận nhu cầu — vui lòng để lại danh thiếp, loại sản phẩm và số lượng dự kiến, sẽ có người liên hệ sau triển lãm.'},
+  tip:{zh:'不要承諾可以做、不要提其他公司名稱。收名片，在洽談記錄本標註「OEM」，展後交給 Henry。',en:'Do not promise anything and do not mention any other company name. Take the card, mark "OEM" in the log, and hand it to Henry after the show.',vi:'Không hứa hẹn, không nhắc tên công ty nào khác. Lấy danh thiếp, ghi "OEM" trong sổ, sau triển lãm chuyển cho Henry.'}},
+ {c:'co',q:{zh:'你們在越南有經銷商或門市嗎？',en:'Do you have distributors or stores in Vietnam?',vi:'Các bạn có nhà phân phối hoặc cửa hàng ở Việt Nam không?'},
+  a:{zh:'可以在官網 viemag.biz 看完整產品。我們正在招募越南經銷商／代理商，提供完整產品線、穩定的價格管理、售後支援，加入門檻不高，詳見官網「經銷商」頁面。歡迎留下名片洽談。',
+     en:'See the full range at viemag.biz. We are recruiting dealers and distributors in Vietnam: complete product line, price discipline, after-sales support and a low entry threshold — see the "For Dealers" page on our website. Please leave your card so we can talk.',
+     vi:'Xem đầy đủ sản phẩm tại viemag.biz. Chúng tôi đang tuyển đại lý / nhà phân phối tại Việt Nam: dòng sản phẩm đầy đủ, giữ giá ổn định, hỗ trợ hậu mãi, điều kiện tham gia dễ dàng — xem trang "Đại lý" trên website. Mời anh/chị để lại danh thiếp để trao đổi.'},
+  tip:{zh:'這是 B 端客人，務必收名片並記錄需求。',en:'This is a B2B lead — always collect the card and log the need.',vi:'Đây là khách B2B — nhất định lấy danh thiếp và ghi lại nhu cầu.'}},
+ {c:'pr',q:{zh:'這個產品多少錢？',en:'How much is this?',vi:'Sản phẩm này giá bao nhiêu?'},
+  a:{zh:'先判斷客人是 B（經銷/批發/企業）還是 C（一般消費者）。C：直接報「報價單」頁的建議售價。B：請客人留名片和 email，展後由業務提供正式報價，不要在現場報批發價。',
+     en:'First identify B (dealer/wholesale/company) or C (consumer). C: quote the MSRP on the Price List tab. B: ask for a business card and email; sales will send a formal quotation after the show. Do not quote wholesale prices on the spot.',
+     vi:'Trước tiên xác định khách B (đại lý/bán sỉ/doanh nghiệp) hay C (người tiêu dùng). C: báo giá bán lẻ đề xuất ở tab Bảng giá. B: xin danh thiếp và email, bộ phận kinh doanh sẽ gửi báo giá chính thức sau triển lãm. Không báo giá sỉ tại chỗ.'}},
+ {c:'pr',q:{zh:'為什麼你們比網路上貴？',en:'Why are you more expensive than online?',vi:'Sao giá các bạn cao hơn trên mạng?'},
+  a:{zh:'網路上很多價格是促銷折扣後或無品牌產品。我們使用 N52/N54 強磁、鋁合金或鋅合金材料，產品經過磁力、震動、溫升和耐久壽命測試，並有品牌售後服務。手機掉落維修一次的費用，遠高於支架的價差。可以現場比較磁力和做工。',
+     en:'Many online prices are after-discount or for no-name products. We use strong N52/N54 magnets and aluminium or zinc alloy, test for magnetic force, vibration, thermal rise and lifecycle, and offer brand after-sales service. One dropped-phone repair costs far more than the price difference. Feel free to compare magnet strength and build quality here.',
+     vi:'Nhiều giá trên mạng là giá sau khuyến mãi hoặc hàng không thương hiệu. Chúng tôi dùng nam châm mạnh N52/N54, hợp kim nhôm hoặc kẽm, kiểm tra lực hút, độ rung, độ tăng nhiệt và tuổi thọ, và có bảo hành chính hãng. Một lần sửa điện thoại bị rơi tốn hơn nhiều so với chênh lệch giá. Mời anh/chị thử lực hút và độ hoàn thiện ngay tại gian hàng.'},
+  tip:{zh:'不要批評競爭品牌；讓客人親手試磁力。',en:'Never criticise competitors; let the customer feel the magnet.',vi:'Không chê đối thủ; hãy để khách tự thử lực hút.'}},
+ {c:'pr',q:{zh:'量大可以優惠嗎？優惠多少？',en:'Is there a volume discount? How much?',vi:'Mua số lượng lớn có giảm giá không? Bao nhiêu?'},
+  a:{zh:'當然有批量優惠。請問您對哪些產品有興趣、大概需要多少數量？麻煩留下名片，展後業務會提供報價。',
+     en:'Yes, volume orders get better pricing. Which products and roughly what quantity? Please leave your card and our sales team will send a quotation after the show.',
+     vi:'Có, mua số lượng lớn sẽ có giá ưu đãi. Anh/chị quan tâm sản phẩm nào và số lượng khoảng bao nhiêu? Vui lòng để lại danh thiếp, bộ phận kinh doanh sẽ gửi báo giá sau triển lãm.'}},
+ {c:'pr',q:{zh:'MOQ（最低訂購量）是多少？',en:'What is the MOQ?',vi:'Số lượng đặt hàng tối thiểu (MOQ) là bao nhiêu?'},
+  a:{zh:'VIEMAG 現貨經銷 MOQ ⟦待確認⟧。VIEMAG 不承接 OEM/ODM。',
+     en:'VIEMAG distribution MOQ ⟦TBC⟧. VIEMAG does not take OEM/ODM orders.',
+     vi:'MOQ phân phối VIEMAG ⟦chưa xác nhận⟧. VIEMAG không nhận đơn OEM/ODM.'}},
+ {c:'pr',q:{zh:'現在可以買嗎？多久會收到？',en:'Can I buy now? How soon will I receive it?',vi:'Bây giờ mua được không? Bao lâu thì nhận hàng?'},
+  a:{zh:'報價單標示「已上架」的產品可在 viemag.biz 購買；「即將上市」的產品上市時間 ⟦待確認⟧。下單到收貨時間 ⟦待確認⟧。展位樣品不現場販售 ⟦待確認⟧。',
+     en:'Products marked "On sale" can be bought at viemag.biz; launch date for "Coming soon" items ⟦TBC⟧. Delivery time ⟦TBC⟧. Booth samples are not sold on site ⟦TBC⟧.',
+     vi:'Sản phẩm ghi "Đã đăng bán" có thể mua tại viemag.biz; ngày ra mắt của sản phẩm "Sắp ra mắt" ⟦chưa xác nhận⟧. Thời gian giao hàng ⟦chưa xác nhận⟧. Không bán mẫu tại gian hàng ⟦chưa xác nhận⟧.'}},
+ {c:'pr',q:{zh:'有保固嗎？',en:'Is there a warranty?',vi:'Có bảo hành không?'},
+  a:{zh:'有，VIEMAG 保固期 ⟦待確認⟧。',
+     en:'Yes. VIEMAG warranty period ⟦TBC⟧.',
+     vi:'Có. Thời gian bảo hành VIEMAG ⟦chưa xác nhận⟧.'}},
+ {c:'us',q:{zh:'磁鐵會不會傷害手機？',en:'Will the magnet damage my phone?',vi:'Nam châm có làm hỏng điện thoại không?'},
+  a:{zh:'不會。MagSafe 是 Apple 的磁吸標準，iPhone 12 以後都內建磁鐵，不影響手機正常使用。提醒客人：有磁條的卡片（如部分銀行卡、房卡）不要直接貼在磁鐵上。',
+     en:'No. MagSafe is Apple\'s magnetic standard — iPhone 12 and later have built-in magnets, and normal use is not affected. Reminder: keep magnetic-stripe cards (some bank cards, hotel keys) away from the magnet.',
+     vi:'Không. MagSafe là chuẩn từ tính của Apple, iPhone 12 trở lên có sẵn nam châm, không ảnh hưởng sử dụng bình thường. Lưu ý: không để thẻ có dải từ (một số thẻ ngân hàng, thẻ phòng) dính trực tiếp vào nam châm.'}},
+ {c:'us',q:{zh:'安卓手機或舊款 iPhone 可以用嗎？',en:'Does it work with Android or older iPhones?',vi:'Điện thoại Android hoặc iPhone đời cũ dùng được không?'},
+  a:{zh:'可以。手機背面貼引磁環，或使用磁吸手機殼即可。P02 附金屬貼片；其他型號是否附引磁環 ⟦待確認⟧。',
+     en:'Yes — attach a magnetic ring to the back of the phone or use a magnetic case. P02 includes a metal plate; whether other models include a ring ⟦TBC⟧.',
+     vi:'Được — dán vòng hít từ ở mặt sau điện thoại hoặc dùng ốp lưng từ tính. P02 có kèm miếng kim loại; các mẫu khác có kèm vòng hít hay không ⟦chưa xác nhận⟧.'}},
+ {c:'us',q:{zh:'戴手機殼可以用嗎？',en:'Does it work with a phone case?',vi:'Có ốp lưng thì dùng được không?'},
+  a:{zh:'MagSafe 磁吸殼可以直接使用。一般厚殼會減弱磁力，建議在殼外貼引磁環。',
+     en:'MagSafe cases work directly. Thick non-magnetic cases weaken the hold — add a magnetic ring on the outside of the case.',
+     vi:'Ốp MagSafe dùng trực tiếp được. Ốp dày không từ tính sẽ làm yếu lực hút — nên dán vòng hít bên ngoài ốp.'}},
+ {c:'us',q:{zh:'開車路況不好會不會掉？',en:'Will it fall off on bumpy roads?',vi:'Đi đường xóc có bị rơi không?'},
+  a:{zh:'我們使用 N52/N54 強磁（V08 有 16 顆 N52），產品經過震動測試。可以請客人在展位現場搖晃測試。',
+     en:'We use strong N52/N54 magnets (V08 has 16 × N52) and our products are vibration-tested. Invite the customer to shake-test it at the booth.',
+     vi:'Chúng tôi dùng nam châm mạnh N52/N54 (V08 có 16 viên N52) và sản phẩm đã qua kiểm tra độ rung. Mời khách lắc thử ngay tại gian hàng.'}},
+ {c:'us',q:{zh:'機車可以用嗎？',en:'Can I use it on a motorbike?',vi:'Dùng cho xe máy được không?'},
+  a:{zh:'這次展出的產品主要為汽車、桌面、健身、旅行設計，沒有機車專用款。我們會記錄您的需求。',
+     en:'The products shown are designed for car, desk, gym and travel use; there is no motorbike-specific model. We will note your request.',
+     vi:'Sản phẩm trưng bày chủ yếu dành cho ô tô, bàn làm việc, gym và du lịch; chưa có mẫu chuyên cho xe máy. Chúng tôi sẽ ghi nhận nhu cầu của anh/chị.'},
+  tip:{zh:'越南機車需求大，請把這類詢問記在洽談記錄本。',en:'Motorbike demand is big in Vietnam — log every such request.',vi:'Nhu cầu xe máy ở VN rất lớn — hãy ghi lại mọi yêu cầu loại này.'}},
+ {c:'us',q:{zh:'真空吸盤能貼在哪裡？會不會掉？',en:'Where can the vacuum suction base stick? Will it come off?',vi:'Đế hút chân không dán được ở đâu? Có bị rơi không?'},
+  a:{zh:'V02、V06、V07、V08、V09 使用真空吸盤（奈米膠），適合平滑表面：中控台、玻璃、桌面、磁磚。粗糙皮紋表面吸力會下降。吸盤髒了用清水洗淨、晾乾即可恢復黏性。',
+     en:'V02, V06, V07, V08 and V09 use a nano-gel vacuum base, best on smooth surfaces: dashboard, glass, desk, tiles. Grip is weaker on rough textured surfaces. If dirty, rinse with water and air-dry to restore stickiness.',
+     vi:'V02, V06, V07, V08, V09 dùng đế hút chân không gel nano, phù hợp bề mặt nhẵn: taplo, kính, bàn, gạch men. Bề mặt nhám/vân da sẽ giảm lực hút. Khi bẩn, rửa bằng nước sạch và để khô là dính lại.'}},
+ {c:'us',q:{zh:'越南天氣很熱，會不會變形或掉下來？',en:'Vietnam is hot — will it deform or fall off?',vi:'Trời Việt Nam nóng, sản phẩm có bị biến dạng hay rơi không?'},
+  a:{zh:'主要結構為鋁合金或鋅合金，產品經過溫升測試。耐溫範圍 ⟦待確認⟧。建議停車曝曬時把手機取下，避免手機過熱。',
+     en:'Main structures are aluminium or zinc alloy, and products are tested for thermal rise. Operating temperature range ⟦TBC⟧. When parking in direct sun, we recommend removing the phone to avoid overheating.',
+     vi:'Kết cấu chính bằng hợp kim nhôm hoặc kẽm, sản phẩm đã qua kiểm tra độ tăng nhiệt. Dải nhiệt độ sử dụng ⟦chưa xác nhận⟧. Khi đỗ xe ngoài nắng, nên tháo điện thoại ra để tránh quá nóng.'}},
+ {c:'us',q:{zh:'無線充電款要用什麼充電器？',en:'What charger does the wireless model need?',vi:'Mẫu sạc không dây cần củ sạc gì?'},
+  a:{zh:'VQ04 支援 15W 無線充電，VIEMAG 充電產品依 Qi2 標準設計，相容 MagSafe，需接 USB-C 電源。建議使用的充電頭規格與是否附車充 ⟦待確認⟧。',
+     en:'VQ04 supports 15 W wireless charging; VIEMAG charging products are built to the Qi2 standard and are MagSafe-compatible, powered via USB-C. Recommended adapter spec and whether a car charger is included ⟦TBC⟧.',
+     vi:'VQ04 hỗ trợ sạc không dây 15W; sản phẩm sạc của VIEMAG theo chuẩn Qi2, tương thích MagSafe, cấp nguồn qua USB-C. Thông số củ sạc khuyến nghị và có kèm tẩu sạc ô tô hay không ⟦chưa xác nhận⟧.'}},
+ {c:'ln',q:{zh:'你們只賣手機支架嗎？',en:'Do you only sell phone mounts?',vi:'Các bạn chỉ bán giá đỡ điện thoại thôi à?'},
+  a:{zh:'VIEMAG 是給開車與辦公桌使用的磁吸配件系統，產品線包括車用支架、Qi2 無線充電支架、桌面與旅行充電器、磁吸配件。這次展出以支架為主，也有磁吸錶帶 P07。完整產品請看 viemag.biz。',
+     en:'VIEMAG is a magnetic accessory system for driving and desk work: car mounts, Qi2 wireless charging mounts, desk and travel chargers, and magnetic accessories. This show focuses on mounts, plus the magnetic watch strap P07. See the full range at viemag.biz.',
+     vi:'VIEMAG là hệ thống phụ kiện từ tính cho lái xe và bàn làm việc: giá đỡ ô tô, giá đỡ sạc không dây chuẩn Qi2, sạc để bàn và sạc du lịch, phụ kiện từ tính. Triển lãm lần này tập trung vào giá đỡ, và dây đồng hồ từ tính P07. Xem đầy đủ sản phẩm tại viemag.biz.'}},
+ {c:'ln',q:{zh:'有金屬或鋁合金的支架嗎？',en:'Do you have metal / aluminium mounts?',vi:'Có giá đỡ bằng kim loại / nhôm không?'},
+  a:{zh:'有。P03、P04、V08 是鋁合金；P01、V02 是鋅合金。',
+     en:'Yes. P03, P04 and V08 are aluminium alloy; P01 and V02 are zinc alloy.',
+     vi:'Có. P03, P04, V08 bằng hợp kim nhôm; P01, V02 bằng hợp kim kẽm.'}},
+ {c:'ln',q:{zh:'健身款怎麼用？8 磁和 4 磁差在哪？',en:'How do the gym mounts work? 8 vs 4 magnets?',vi:'Giá đỡ gym dùng thế nào? 8 và 4 nam châm khác gì?'},
+  a:{zh:'P05/P06 長型底座直接吸在健身器材的金屬表面（跑步機、重訓架），方便看影片或記錄訓練。P05 有 8 顆磁鐵雙排，吸力更強；P06 為 4 顆磁鐵，較輕巧。',
+     en:'P05/P06 long bases stick directly onto metal gym equipment (treadmills, racks) so you can watch videos or log workouts. P05 has 8 magnets in two rows for a stronger hold; P06 has 4 magnets and is lighter.',
+     vi:'P05/P06 có đế dài hút trực tiếp lên bề mặt kim loại của thiết bị gym (máy chạy, giàn tạ) để xem video hoặc ghi lại bài tập. P05 có 8 nam châm hai hàng, lực hút mạnh hơn; P06 có 4 nam châm, gọn nhẹ hơn.'}},
+ {c:'ln',q:{zh:'你們有 Quad Lock、Baseus 等其他品牌嗎？',en:'Do you carry Quad Lock, Baseus or other brands?',vi:'Có bán Quad Lock, Baseus hay thương hiệu khác không?'},
+  a:{zh:'這個展位只展出 VIEMAG。我們沒有代理 Quad Lock、Baseus 這些品牌。',
+     en:'This booth shows VIEMAG only. We don\'t carry Quad Lock or Baseus.',
+     vi:'Gian hàng này chỉ trưng bày VIEMAG. Chúng tôi không phân phối Quad Lock hay Baseus.'}},
+];
+
+/* ---------- SAMPLES (from 樣品清單 20261021) ---------- */
+const SRC={'华恩':'华恩','博锐':'博锐','酷瑞德':'酷瑞德','科益':'科益',
+ '越南工廠取':{zh:'越南工廠取',en:'From VN factory',vi:'Lấy tại nhà máy VN'},
+ '展會':{zh:'展會（現有展品）',en:'Existing show stock',vi:'Hàng mẫu triển lãm sẵn có'},
+ '揚均展會':{zh:'揚均（展會）',en:'Yangjun (show stock)',vi:'Yangjun (hàng mẫu TL)'},
+ 'carry':{zh:'專人攜帶',en:'Hand-carried',vi:'Mang tay'},
+ '科益展會':{zh:'科益（展會）',en:'Keyi (show stock)',vi:'Keyi (hàng mẫu TL)'}};
+const SAM=[
+ ['V03',30,40,'华恩',1,'57.5×39×28 cm',{zh:'彩盒包裝',en:'Retail box',vi:'Hộp màu'}],
+ ['V02',30,40,'华恩',null,'',null],
+ ['P03',30,40,'博锐',null,'',null],
+ ['V06',30,40,'博锐',1,'49.5×34×47 cm',{zh:'彩盒包裝',en:'Retail box',vi:'Hộp màu'}],
+ ['V07',30,null,'博锐',null,'',null],
+ ['V08',30,null,'博锐',null,'',null],
+ ['V09',30,40,'酷瑞德',1,'35×25.5×18 cm',{zh:'含配件包，無彩盒',en:'Accessory pack, no retail box',vi:'Có túi phụ kiện, không hộp màu'}],
+ ['VQ04',30,40,'科益',1,'47×48.5×25 cm',{zh:'含配件包，無彩盒',en:'Accessory pack, no retail box',vi:'Có túi phụ kiện, không hộp màu'}],
+ ['V05',30,40,'科益',null,'',null],
+ ['V01',30,40,'越南工廠取',null,'',null],
+ ['P02',null,40,'展會',null,'',null],
+ ['P05',null,40,'展會',null,'',null],
+ ['P06',null,40,'展會',null,'',null],
+ ['P07',null,40,'展會',null,'',null],
+ ['P01',null,40,'揚均展會',null,'',{zh:'無',en:'None',vi:'Không'}],
+ ['P04',4,40,'carry',null,'',{zh:'彩盒包裝',en:'Retail box',vi:'Hộp màu'}],
+ ['LIGHT',2,0,'科益展會',null,'',{zh:'追加項目',en:'Added item',vi:'Hạng mục bổ sung'}],
+];
+const LIGHT={zh:'補光燈',en:'Fill light',vi:'Đèn trợ sáng'};
+
+/* ---------- CHECKLIST (kept from 2026 HK/VN plan + VIEMAG additions) ---------- */
+const CK=[
+ {g:{zh:'展位結構與佈置',en:'Booth structure & display',vi:'Kết cấu & trang trí gian hàng'},items:[
+  [{zh:'VIEMAG 海報（長／短）',en:'VIEMAG posters (long / short)',vi:'Poster VIEMAG (dài / ngắn)'},{zh:'1 組',en:'1 set',vi:'1 bộ'},{zh:'依 6m×3m 雙開口配置',en:'Lay out for 6 m×3 m, 2 open sides',vi:'Bố trí theo gian 6m×3m, mở 2 mặt'}],
+  [{zh:'展位號碼牌',en:'Booth number sign',vi:'Biển số gian hàng'},{zh:'1 個',en:'1',vi:'1 cái'},{zh:'主辦方提供；展位號 ⟦待確認⟧',en:'Provided by organiser; booth no. ⟦TBC⟧',vi:'BTC cung cấp; số gian ⟦chưa xác nhận⟧'}],
+  [{zh:'樣品標籤卡（SKU／品名／售價，三語）',en:'Sample tag cards (SKU / name / price, 3 languages)',vi:'Thẻ tên mẫu (SKU / tên / giá, 3 ngôn ngữ)'},{zh:'16 張以上',en:'16+',vi:'16+ thẻ'},null],
+  [{zh:'VIEMAG LOGO 大型貼紙',en:'Large VIEMAG logo stickers',vi:'Decal logo VIEMAG cỡ lớn'},{zh:'2 個',en:'2',vi:'2 cái'},null],
+  [{zh:'APPLE MFi / MagSafe 相關標示',en:'Apple MFi / MagSafe signage',vi:'Biển MFi / MagSafe'},{zh:'1 個',en:'1',vi:'1 cái'},{zh:'僅限已取得認證的產品 ⟦待確認⟧',en:'Only for certified products ⟦TBC⟧',vi:'Chỉ dùng cho sản phẩm đã chứng nhận ⟦chưa xác nhận⟧'}],
+  [{zh:'MADE IN VIETNAM 標示',en:'MADE IN VIETNAM tag',vi:'Nhãn MADE IN VIETNAM'},{zh:'1 個',en:'1',vi:'1 cái'},{zh:'只放在 V01 旁',en:'Next to V01 only',vi:'Chỉ đặt cạnh V01'}],
+  [{zh:'QR Code 立牌（viemag.biz）',en:'QR code stand (viemag.biz)',vi:'Standee mã QR (viemag.biz)'},{zh:'2 個',en:'2',vi:'2 cái'},null],
+  [{zh:'冷氣出風口治具',en:'Air-vent demo fixture',vi:'Mô hình cửa gió điều hòa'},{zh:'2 個',en:'2',vi:'2 cái'},{zh:'展示 V01',en:'For V01 demo',vi:'Trưng bày V01'}],
+  [{zh:'汽車中控台／玻璃展示板',en:'Dashboard / glass demo panel',vi:'Tấm mô phỏng taplo / kính'},{zh:'2 片',en:'2',vi:'2 tấm'},{zh:'讓客人測試真空吸盤 V02/V06–V09',en:'Let customers test vacuum bases V02/V06–V09',vi:'Cho khách thử đế hút chân không V02/V06–V09'},1],
+  [{zh:'健身器材把手／金屬管展示台',en:'Gym handle / metal tube display',vi:'Mô hình tay cầm gym / ống kim loại'},{zh:'1 組',en:'1 set',vi:'1 bộ'},{zh:'展示 P02、P05、P06',en:'For P02, P05, P06',vi:'Trưng bày P02, P05, P06'}],
+  [{zh:'小透明立牌座',en:'Small clear stand holders',vi:'Đế mica nhỏ'},{zh:'20 個',en:'20',vi:'20 cái'},null],
+  [{zh:'產品介紹 B5 立牌＋底座',en:'B5 product info stands + bases',vi:'Standee giới thiệu B5 + đế'},{zh:'10＋12 個',en:'10 + 12',vi:'10 + 12 cái'},{zh:'內容改為 VIEMAG 三語',en:'Update content to VIEMAG, 3 languages',vi:'Đổi nội dung VIEMAG, 3 ngôn ngữ'}],
+  [{zh:'磁吸展示台',en:'Magnetic display stands',vi:'Kệ trưng bày từ tính'},{zh:'3 個',en:'3',vi:'3 cái'},{zh:'確認展場是否提供',en:'Check if venue provides',vi:'Kiểm tra BTC có cung cấp không'}],
+  [{zh:'大螢幕展示台',en:'Large screen display',vi:'Màn hình lớn'},{zh:'1 台',en:'1',vi:'1 cái'},{zh:'播放產品影片',en:'Play product videos',vi:'Chiếu video sản phẩm'}],
+ ]},
+ {g:{zh:'行銷物料與文件',en:'Marketing materials & documents',vi:'Tài liệu marketing & giấy tờ'},items:[
+  [{zh:'VIEMAG 贈品',en:'VIEMAG giveaways',vi:'Quà tặng VIEMAG'},{zh:'⟦數量待確認⟧',en:'⟦qty TBC⟧',vi:'⟦SL chưa xác nhận⟧'},{zh:'吸引客人停留',en:'To attract visitors',vi:'Thu hút khách dừng lại'}],
+  [{zh:'VIEMAG 布袋／手提袋',en:'VIEMAG tote bags',vi:'Túi vải VIEMAG'},{zh:'30 個',en:'30',vi:'30 cái'},{zh:'給客人裝資料',en:'For customer materials',vi:'Cho khách đựng tài liệu'}],
+  [{zh:'展覽邀請函／參展證明／參展證',en:'Invitation / exhibitor proof / badges',vi:'Thư mời / giấy xác nhận / thẻ triển lãm'},{zh:'每人 1 份',en:'1 per person',vi:'Mỗi người 1'},null],
+  [{zh:'展場備用金',en:'Petty cash',vi:'Tiền mặt dự phòng'},{zh:'依需求',en:'As needed',vi:'Theo nhu cầu'},{zh:'越南盾現金',en:'VND cash',vi:'Tiền mặt VND'}],
+  [{zh:'VIEMAG 紙本型錄',en:'VIEMAG printed catalogue',vi:'Catalogue VIEMAG bản in'},{zh:'⟦數量待確認⟧',en:'⟦qty TBC⟧',vi:'⟦SL chưa xác nhận⟧'},null],
+  [{zh:'電子型錄（QR）',en:'E-catalogue (QR)',vi:'Catalogue điện tử (QR)'},{zh:'1 份',en:'1',vi:'1'},null],
+  [{zh:'產品 DM／單頁傳單（越文）',en:'Product flyers (Vietnamese)',vi:'Tờ rơi sản phẩm (tiếng Việt)'},{zh:'60 份',en:'60',vi:'60 tờ'},null],
+  [{zh:'建議售價表（列印，越／英）',en:'Printed MSRP list (VI / EN)',vi:'Bảng giá bán lẻ in sẵn (VI / EN)'},{zh:'2 份',en:'2',vi:'2 bản'},{zh:'取自本手冊「報價單」頁',en:'From the Price List tab',vi:'Lấy từ tab Bảng giá'}],
+  [{zh:'VIEMAG 名片（越／英）',en:'VIEMAG business cards (VI / EN)',vi:'Danh thiếp VIEMAG (VI / EN)'},{zh:'每位業務',en:'Each salesperson',vi:'Mỗi nhân viên KD'},{zh:'⟦是否已印製待確認⟧',en:'⟦printed? TBC⟧',vi:'⟦đã in chưa? chưa xác nhận⟧'}],
+  [{zh:'客戶洽談記錄本',en:'Customer meeting log books',vi:'Sổ ghi chép khách hàng'},{zh:'3 本',en:'3',vi:'3 quyển'},{zh:'記錄 B/C、需求、品項、數量',en:'Log B/C, needs, SKUs, qty',vi:'Ghi B/C, nhu cầu, SKU, số lượng'}],
+  [{zh:'名片本',en:'Business card holders',vi:'Sổ đựng danh thiếp'},{zh:'3 本',en:'3',vi:'3 quyển'},null],
+  [{zh:'空白 Invoice',en:'Blank invoices',vi:'Hóa đơn trắng'},{zh:'1 本',en:'1 pad',vi:'1 quyển'},null],
+  [{zh:'VIEMAG 品牌／經銷簡報',en:'VIEMAG brand / distributor deck',vi:'Slide giới thiệu VIEMAG / phân phối'},{zh:'平板內存',en:'On tablet',vi:'Lưu trong máy tính bảng'},{zh:'B 端客人使用 ⟦待準備⟧',en:'For B2B visitors ⟦to prepare⟧',vi:'Dùng cho khách B2B ⟦cần chuẩn bị⟧'},1],
+ ]},
+ {g:{zh:'電子設備與示範',en:'Electronics & demo',vi:'Thiết bị điện tử & demo'},items:[
+  [{zh:'手機樣機（iPhone 12 以後，MagSafe）',en:'Demo phones (iPhone 12+, MagSafe)',vi:'Điện thoại mẫu (iPhone 12 trở lên, MagSafe)'},{zh:'4 台',en:'4',vi:'4 cái'},{zh:'充飽電',en:'Fully charged',vi:'Sạc đầy'}],
+  [{zh:'安卓手機＋引磁環',en:'Android phone + magnetic ring',vi:'Điện thoại Android + vòng hít từ'},{zh:'1 台',en:'1',vi:'1 cái'},{zh:'示範非 MagSafe 手機也能用',en:'Show non-MagSafe compatibility',vi:'Demo điện thoại không MagSafe'},1],
+  [{zh:'備用引磁環／引磁片',en:'Spare magnetic rings / plates',vi:'Vòng / miếng hít từ dự phòng'},{zh:'10 個',en:'10',vi:'10 cái'},null,1],
+  [{zh:'MagSafe 手機殼',en:'MagSafe phone cases',vi:'Ốp lưng MagSafe'},{zh:'2 個',en:'2',vi:'2 cái'},null,1],
+  [{zh:'USB-C 快充頭（給 VQ04 示範）',en:'USB-C fast charger (for VQ04 demo)',vi:'Củ sạc nhanh USB-C (demo VQ04)'},{zh:'2 個',en:'2',vi:'2 cái'},null,1],
+  [{zh:'MagSafe 充電器',en:'MagSafe charger',vi:'Sạc MagSafe'},{zh:'1 副',en:'1',vi:'1 bộ'},null],
+  [{zh:'Type-C 線（C>C ×2、A>C ×3）',en:'Type-C cables (C>C ×2, A>C ×3)',vi:'Cáp Type-C (C>C ×2, A>C ×3)'},{zh:'6 條',en:'6',vi:'6 sợi'},null],
+  [{zh:'平板電腦（展示本手冊／型錄／點單）',en:'Tablet (this handbook / catalogue / orders)',vi:'Máy tính bảng (sổ tay này / catalogue / đơn hàng)'},{zh:'1 台',en:'1',vi:'1 cái'},null],
+  [{zh:'補光燈',en:'Fill light',vi:'Đèn trợ sáng'},{zh:'2 個',en:'2',vi:'2 cái'},{zh:'見樣品清單',en:'See sample list',vi:'Xem danh sách mẫu'}],
+  [{zh:'相機／攝影機 Insta360',en:'Camera / Insta360',vi:'Máy ảnh / Insta360'},{zh:'1 台',en:'1',vi:'1 cái'},{zh:'記錄展覽現場',en:'Record the show',vi:'Ghi hình triển lãm'}],
+  [{zh:'小編手機（社群發文）',en:'Social media phone',vi:'Điện thoại đăng mạng xã hội'},{zh:'1 台',en:'1',vi:'1 cái'},null],
+  [{zh:'多孔電源供應器／延長線',en:'Multi-port power supply / extension cords',vi:'Bộ nguồn nhiều cổng / ổ cắm kéo dài'},{zh:'1＋3',en:'1 + 3',vi:'1 + 3'},{zh:'越南 220V，插座 A/C 型',en:'Vietnam 220 V, type A/C sockets',vi:'Điện 220V, ổ cắm loại A/C'}],
+  [{zh:'萬國轉接頭',en:'Universal adapters',vi:'Đầu chuyển đa năng'},{zh:'2 個',en:'2',vi:'2 cái'},null],
+ ]},
+ {g:{zh:'文具與工具',en:'Stationery & tools',vi:'Văn phòng phẩm & dụng cụ'},items:[
+  [{zh:'掛勾',en:'Hooks',vi:'Móc treo'},{zh:'25 件',en:'25',vi:'25 cái'},{zh:'掛海報或展品',en:'For posters / products',vi:'Treo poster / sản phẩm'}],
+  [{zh:'大夾子',en:'Large clips',vi:'Kẹp lớn'},{zh:'2 個',en:'2',vi:'2 cái'},null],
+  [{zh:'膠帶（寬 2、窄 1）／雙面膠',en:'Tape (2 wide, 1 narrow) / double-sided tape',vi:'Băng keo (2 bản to, 1 bản nhỏ) / keo 2 mặt'},{zh:'3＋1',en:'3 + 1',vi:'3 + 1'},null],
+  [{zh:'訂書機＆針',en:'Stapler & staples',vi:'Bấm ghim & ghim'},{zh:'2 組',en:'2 sets',vi:'2 bộ'},null],
+  [{zh:'刀片、剪刀',en:'Cutters, scissors',vi:'Dao rọc giấy, kéo'},{zh:'各 2 把',en:'2 each',vi:'Mỗi loại 2'},null],
+  [{zh:'螢光筆／麥克筆／原子筆（檢查有沒有水）',en:'Highlighters / markers / pens (check ink)',vi:'Bút dạ quang / bút lông / bút bi (kiểm tra mực)'},{zh:'3／2／5 支',en:'3 / 2 / 5',vi:'3 / 2 / 5 cây'},null],
+  [{zh:'計算機',en:'Calculator',vi:'Máy tính bỏ túi'},{zh:'1 個',en:'1',vi:'1 cái'},null],
+  [{zh:'十字螺絲起子、六角扳手',en:'Phillips screwdriver, hex key',vi:'Tua vít 4 cạnh, lục giác'},{zh:'各 1',en:'1 each',vi:'Mỗi loại 1'},null],
+  [{zh:'捲尺',en:'Tape measure',vi:'Thước dây'},{zh:'1 個',en:'1',vi:'1 cái'},null],
+  [{zh:'白色手套',en:'White gloves',vi:'Găng tay trắng'},{zh:'2 雙',en:'2 pairs',vi:'2 đôi'},null],
+  [{zh:'磁力顯示片',en:'Magnetic field viewer film',vi:'Phim hiển thị từ trường'},{zh:'2 片',en:'2',vi:'2 tấm'},{zh:'在紅色透明拉鍊袋',en:'In red clear zip bag',vi:'Trong túi zip trong màu đỏ'}],
+  [{zh:'酒精濕紙巾／超細纖維布',en:'Alcohol wipes / microfiber cloths',vi:'Khăn ướt cồn / khăn sợi nhỏ'},{zh:'適量',en:'As needed',vi:'Đủ dùng'},{zh:'清潔吸盤與展示面',en:'Clean suction bases & demo surfaces',vi:'Lau đế hút và bề mặt demo'},1],
+  [{zh:'抹布、衛生紙、垃圾袋',en:'Rags, tissues, trash bags',vi:'Giẻ lau, khăn giấy, túi rác'},{zh:'3／2／4',en:'3 / 2 / 4',vi:'3 / 2 / 4'},null],
+  [{zh:'糖果／小零食（吸客）',en:'Candy / snacks (for visitors)',vi:'Kẹo / đồ ăn nhẹ (mời khách)'},{zh:'適量',en:'As needed',vi:'Đủ dùng'},null],
+  [{zh:'行李秤',en:'Luggage scale',vi:'Cân hành lý'},{zh:'1 個',en:'1',vi:'1 cái'},null],
+ ]},
+];
+
+/* ---------- Views ---------- */
+function vOverview(){
+ const X={
+  t:{zh:'總覽與教育訓練',en:'Overview & Training',vi:'Tổng quan & Đào tạo'},
+  s:{zh:'展前請每位同事讀完本頁與「客人常見問題」。',en:'Every team member should read this page and the FAQ before the show.',vi:'Mỗi thành viên vui lòng đọc trang này và phần Câu hỏi thường gặp trước triển lãm.'},
+  show:{zh:'展覽資訊',en:'Show info',vi:'Thông tin triển lãm'},
+  name:{zh:'展覽',en:'Show',vi:'Triển lãm'},date:{zh:'日期',en:'Dates',vi:'Ngày'},venue:{zh:'地點',en:'Venue',vi:'Địa điểm'},booth:{zh:'展位',en:'Booth',vi:'Gian hàng'},
+  boothv:{zh:'6m × 3m 標準攤位，正面＋右側雙開口；展位號 ⟦待確認⟧',en:'6 m × 3 m standard booth, open front + right side; booth no. ⟦TBC⟧',vi:'Gian tiêu chuẩn 6m × 3m, mở mặt trước + bên phải; số gian ⟦chưa xác nhận⟧'},
+  co:{zh:'公司',en:'Company',vi:'Công ty'},
+  addr:{zh:'1st Floor, Plot No. 394, Map Sheet No. 3, Tran Quoc Tang Street, Vo Cuong Ward, Bac Ninh City, Vietnam',en:'1st Floor, Plot No. 394, Map Sheet No. 3, Tran Quoc Tang Street, Vo Cuong Ward, Bac Ninh City, Vietnam',vi:'Tầng 1, Thửa đất số 394, Tờ bản đồ số 3, đường Trần Quốc Tảng, phường Võ Cường, thành phố Bắc Ninh, Việt Nam'},
+  brand:{zh:'品牌一句話',en:'Brand in one line',vi:'Thương hiệu trong một câu'},
+  brandv:{zh:'VIEMAG — Value · Innovation · Excellence。越南品牌，給開車與辦公桌使用的磁吸配件系統：磁吸更穩、充電更可靠，相容 MagSafe，充電產品依 Qi2 標準設計。',en:'VIEMAG — Value · Innovation · Excellence. A Vietnamese magnetic accessory system for driving and desk work: a more secure magnetic hold and more dependable charging, MagSafe-compatible, with charging products built to the Qi2 standard.',vi:'VIEMAG — Value · Innovation · Excellence. Thương hiệu Việt Nam, hệ thống phụ kiện từ tính cho lái xe và bàn làm việc: hút chắc hơn, sạc ổn định hơn, tương thích MagSafe, sản phẩm sạc theo chuẩn Qi2.'},
+  sell:{zh:'三個賣點',en:'Three selling points',vi:'Ba điểm bán hàng'},
+  s1:{zh:'強磁＋四項測試：N52／N54 磁鐵（V08 有 16 顆 N52），經磁力、震動、溫升、耐久壽命測試，現場搖晃示範',en:'Strong magnets + 4 tests: N52/N54 (V08 has 16 × N52), tested for magnetic force, vibration, thermal rise and lifecycle — shake-test it live',vi:'Nam châm mạnh + 4 bài kiểm tra: N52/N54 (V08 có 16 viên N52), kiểm tra lực hút, độ rung, độ tăng nhiệt, tuổi thọ — lắc thử tại chỗ'},
+  s2:{zh:'材質：鋁合金（P03/P04/V08）、鋅合金（P01/V02）',en:'Materials: aluminium (P03/P04/V08), zinc alloy (P01/V02)',vi:'Chất liệu: hợp kim nhôm (P03/P04/V08), hợp kim kẽm (P01/V02)'},
+  s3:{zh:'情境搭配：開車、辦公桌、商務出差、戶外旅行、居家、錄影創作，官網有各情境的搭配建議',en:'Scenario sets: driving, desk work, business travel, outdoors & trips, home, recording & creating — pairing guides on the website',vi:'Bộ theo tình huống: lái xe, bàn làm việc, công tác, ngoài trời & du lịch, ở nhà, quay phim & sáng tạo — gợi ý kết hợp trên website'},
+  flow:{zh:'接待流程',en:'Visitor handling flow',vi:'Quy trình tiếp khách'},
+  f:[
+   [{zh:'主動招呼',en:'Greet',vi:'Chào hỏi'},{zh:'站在走道邊，微笑問候，遞上產品讓客人試',en:'Stand near the aisle, smile, hand them a product to try',vi:'Đứng gần lối đi, mỉm cười chào, đưa sản phẩm cho khách thử'}],
+   [{zh:'判斷 B 或 C',en:'Identify B or C',vi:'Xác định B hay C'},{zh:'問：「您是自己使用，還是公司採購／經銷？」',en:'Ask: "Is this for your own use, or for your company / resale?"',vi:'Hỏi: "Anh/chị mua để dùng hay cho công ty / bán lại?"'}],
+   [{zh:'了解使用場景',en:'Ask about use case',vi:'Tìm hiểu nhu cầu'},{zh:'車用？出風口或中控台？健身？旅行？再推薦合適的產品',en:'Car? Vent or dashboard? Gym? Travel? Then recommend the right model',vi:'Ô tô? Cửa gió hay taplo? Gym? Du lịch? Sau đó giới thiệu mẫu phù hợp'}],
+   [{zh:'現場示範',en:'Demo',vi:'Trình diễn'},{zh:'磁吸＋搖晃測試；真空吸盤貼在展示板；VQ04 示範充電',en:'Magnet + shake test; vacuum base on the demo panel; VQ04 charging',vi:'Hút từ + lắc thử; đế hút trên tấm demo; VQ04 sạc thử'}],
+   [{zh:'收尾',en:'Close',vi:'Kết thúc'},{zh:'C：告知售價與 viemag.biz。B：收名片，填洽談記錄本（品項、數量、需求）',en:'C: give MSRP and viemag.biz. B: take the card and fill the meeting log (SKUs, qty, needs)',vi:'C: báo giá bán lẻ và viemag.biz. B: xin danh thiếp, ghi sổ (SKU, số lượng, nhu cầu)'}],
+  ],
+  cT:{zh:'C 端：一般消費者',en:'C: Consumers',vi:'C: Người tiêu dùng'},
+  cD:{zh:'可直接報建議售價（報價單頁）。即將上市的產品不要承諾上市日期。',en:'Quote MSRP directly (Price List tab). Do not promise launch dates for "Coming soon" items.',vi:'Báo trực tiếp giá bán lẻ (tab Bảng giá). Không hứa ngày ra mắt cho sản phẩm "Sắp ra mắt".'},
+  bT:{zh:'B 端：經銷、批發、企業',en:'B: Dealers, wholesale, companies',vi:'B: Đại lý, bán sỉ, doanh nghiệp'},
+  bD:{zh:'不在現場報批發價、不承諾 MOQ／交期。收名片＋記錄，展後由業務正式報價。問 OEM/ODM 的客人：不承接，但收名片記錄，交給 Henry。',en:'No wholesale price, MOQ or lead-time promises on site. Take card + notes; sales sends a formal quote after the show. OEM/ODM requests: not offered, but take the card, log it and pass it to Henry.',vi:'Không báo giá sỉ, không cam kết MOQ / thời gian giao tại chỗ. Lấy danh thiếp + ghi chú; bộ phận KD gửi báo giá chính thức sau triển lãm. Khách hỏi OEM/ODM: không nhận, nhưng lấy danh thiếp, ghi lại và chuyển cho Henry.'},
+  dont:{zh:'注意事項',en:'Rules',vi:'Lưu ý'},
+  d:[
+   {zh:'黃色虛線標記 ⟦待確認⟧ 的資訊，不可對客人承諾。',en:'Anything marked ⟦TBC⟧ must not be promised to customers.',vi:'Thông tin có nhãn ⟦chưa xác nhận⟧ không được cam kết với khách.'},
+   {zh:'對外只代表 VIEMAG：只用 VIEMAG 名片、制服、布袋、贈品和簡報，不主動提其他品牌；客人問到 peripower 時，照 FAQ 回答。',en:'Represent VIEMAG only: use only VIEMAG cards, uniforms, bags, giveaways and decks; do not bring up other brands — if asked about peripower, answer as in the FAQ.',vi:'Chỉ đại diện VIEMAG: chỉ dùng danh thiếp, đồng phục, túi, quà tặng và slide của VIEMAG; không chủ động nhắc thương hiệu khác — nếu khách hỏi về peripower, trả lời theo FAQ.'},
+   {zh:'不批評其他品牌，用示範說服。',en:'Do not criticise other brands — let the demo do the talking.',vi:'Không chê thương hiệu khác — để sản phẩm tự chứng minh.'},
+   {zh:'展位不要坐著滑手機、不要在展位吃東西。',en:'No sitting on phones or eating at the booth.',vi:'Không ngồi bấm điện thoại, không ăn uống tại gian hàng.'},
+   {zh:'每天收攤前清點樣品（樣品清單頁可勾選）。',en:'Count samples before closing each day (tick them in the Sample List tab).',vi:'Kiểm đếm mẫu trước khi đóng gian mỗi ngày (đánh dấu ở tab Danh sách mẫu).'},
+   {zh:'每天晚上整理名片和洽談紀錄，傳給 Henry。',en:'Each evening, compile cards and meeting notes and send them to Henry.',vi:'Mỗi tối tổng hợp danh thiếp và ghi chú, gửi cho Henry.'},
+  ],
+  cats:{zh:'產品分類速查',en:'Product quick map',vi:'Tra nhanh sản phẩm'},
+  web:{zh:'官網 QR Code',en:'Website QR code',vi:'Mã QR website'},
+  webd:{zh:'請客人掃描看完整產品資訊。點下方 SKU 可開啟該產品的官網頁面。',en:'Let customers scan for full product info. Tap a SKU below to open its product page.',vi:'Mời khách quét mã để xem đầy đủ thông tin sản phẩm. Bấm SKU bên dưới để mở trang sản phẩm.'},
+ };
+ const cats=Object.keys(CAT).map(c=>`<div class="card"><span class="chip cat">${T(CAT[c])}</span><div style="margin-top:6px;font-size:14px">${P.filter(p=>p.cat===c).map(p=>`<b>${p.msrp?`<a class="pl" href="${URL(p.sku)}" target="_blank" rel="noopener">${p.sku}</a>`:p.sku}</b> ${T(p.n)}`).join('<br>')}</div></div>`).join('');
+ return `<h2>${T(X.t)}</h2><p class="sub">${T(X.s)}</p>
+ <div class="grid">
+  <div class="card"><h3 style="margin-top:0">${T(X.show)}</h3><div class="kv">
+   <b>${T(X.name)}</b><span>IEAE Hanoi 2026</span>
+   <b>${T(X.date)}</b><span>5–7/11/2026</span>
+   <b>${T(X.venue)}</b><span>VEC Hanoi</span>
+   <b>${T(X.booth)}</b><span>${fmt(X.boothv)}</span>
+   <b>${T(X.co)}</b><span>PERIPOWER VIETNAM CO., LTD.<br><span class="note">${T(X.addr)}</span><br>☎ 0345 026 866</span></div></div>
+  <div class="card"><h3 style="margin-top:0">${T(X.brand)}</h3><p style="margin:0">${T(X.brandv)}</p>
+   <h3>${T(X.sell)}</h3><ol style="margin:0;padding-left:20px"><li>${T(X.s1)}</li><li>${T(X.s2)}</li><li>${T(X.s3)}</li></ol></div>
+ </div>
+ <h3>${T(X.flow)}</h3><div class="card"><ol class="flow">${X.f.map(x=>`<li><b>${T(x[0])}</b>${T(x[1])}</li>`).join('')}</ol></div>
+ <div class="split"><div class="card bc"><b>${T(X.cT)}</b><p style="margin:4px 0 0">${T(X.cD)}</p></div><div class="card bb"><b>${T(X.bT)}</b><p style="margin:4px 0 0">${T(X.bD)}</p></div></div>
+ <h3>${T(X.dont)}</h3><div class="card"><ul style="margin:0;padding-left:20px">${X.d.map(x=>`<li>${fmt(x)}</li>`).join('')}</ul></div>
+ <h3>${T(X.web)}</h3><div class="card qr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" width="140" height="140" shape-rendering="crispEdges"><rect width="27" height="27" fill="#fff"/><path d="M1,1h1v1h-1zM2,1h1v1h-1zM3,1h1v1h-1zM4,1h1v1h-1zM5,1h1v1h-1zM6,1h1v1h-1zM7,1h1v1h-1zM9,1h1v1h-1zM13,1h1v1h-1zM19,1h1v1h-1zM20,1h1v1h-1zM21,1h1v1h-1zM22,1h1v1h-1zM23,1h1v1h-1zM24,1h1v1h-1zM25,1h1v1h-1zM1,2h1v1h-1zM7,2h1v1h-1zM12,2h1v1h-1zM13,2h1v1h-1zM14,2h1v1h-1zM17,2h1v1h-1zM19,2h1v1h-1zM25,2h1v1h-1zM1,3h1v1h-1zM3,3h1v1h-1zM4,3h1v1h-1zM5,3h1v1h-1zM7,3h1v1h-1zM9,3h1v1h-1zM14,3h1v1h-1zM15,3h1v1h-1zM16,3h1v1h-1zM17,3h1v1h-1zM19,3h1v1h-1zM21,3h1v1h-1zM22,3h1v1h-1zM23,3h1v1h-1zM25,3h1v1h-1zM1,4h1v1h-1zM3,4h1v1h-1zM4,4h1v1h-1zM5,4h1v1h-1zM7,4h1v1h-1zM10,4h1v1h-1zM11,4h1v1h-1zM13,4h1v1h-1zM16,4h1v1h-1zM19,4h1v1h-1zM21,4h1v1h-1zM22,4h1v1h-1zM23,4h1v1h-1zM25,4h1v1h-1zM1,5h1v1h-1zM3,5h1v1h-1zM4,5h1v1h-1zM5,5h1v1h-1zM7,5h1v1h-1zM10,5h1v1h-1zM11,5h1v1h-1zM13,5h1v1h-1zM15,5h1v1h-1zM19,5h1v1h-1zM21,5h1v1h-1zM22,5h1v1h-1zM23,5h1v1h-1zM25,5h1v1h-1zM1,6h1v1h-1zM7,6h1v1h-1zM9,6h1v1h-1zM11,6h1v1h-1zM14,6h1v1h-1zM15,6h1v1h-1zM19,6h1v1h-1zM25,6h1v1h-1zM1,7h1v1h-1zM2,7h1v1h-1zM3,7h1v1h-1zM4,7h1v1h-1zM5,7h1v1h-1zM6,7h1v1h-1zM7,7h1v1h-1zM9,7h1v1h-1zM11,7h1v1h-1zM13,7h1v1h-1zM15,7h1v1h-1zM17,7h1v1h-1zM19,7h1v1h-1zM20,7h1v1h-1zM21,7h1v1h-1zM22,7h1v1h-1zM23,7h1v1h-1zM24,7h1v1h-1zM25,7h1v1h-1zM11,8h1v1h-1zM13,8h1v1h-1zM14,8h1v1h-1zM16,8h1v1h-1zM1,9h1v1h-1zM3,9h1v1h-1zM7,9h1v1h-1zM8,9h1v1h-1zM10,9h1v1h-1zM13,9h1v1h-1zM14,9h1v1h-1zM16,9h1v1h-1zM17,9h1v1h-1zM20,9h1v1h-1zM23,9h1v1h-1zM25,9h1v1h-1zM1,10h1v1h-1zM3,10h1v1h-1zM9,10h1v1h-1zM11,10h1v1h-1zM13,10h1v1h-1zM16,10h1v1h-1zM17,10h1v1h-1zM19,10h1v1h-1zM20,10h1v1h-1zM22,10h1v1h-1zM24,10h1v1h-1zM25,10h1v1h-1zM3,11h1v1h-1zM5,11h1v1h-1zM7,11h1v1h-1zM11,11h1v1h-1zM12,11h1v1h-1zM13,11h1v1h-1zM14,11h1v1h-1zM15,11h1v1h-1zM16,11h1v1h-1zM17,11h1v1h-1zM18,11h1v1h-1zM20,11h1v1h-1zM22,11h1v1h-1zM23,11h1v1h-1zM25,11h1v1h-1zM1,12h1v1h-1zM2,12h1v1h-1zM3,12h1v1h-1zM4,12h1v1h-1zM9,12h1v1h-1zM10,12h1v1h-1zM13,12h1v1h-1zM15,12h1v1h-1zM16,12h1v1h-1zM17,12h1v1h-1zM18,12h1v1h-1zM20,12h1v1h-1zM22,12h1v1h-1zM1,13h1v1h-1zM2,13h1v1h-1zM4,13h1v1h-1zM6,13h1v1h-1zM7,13h1v1h-1zM11,13h1v1h-1zM12,13h1v1h-1zM14,13h1v1h-1zM15,13h1v1h-1zM17,13h1v1h-1zM19,13h1v1h-1zM25,13h1v1h-1zM2,14h1v1h-1zM3,14h1v1h-1zM6,14h1v1h-1zM9,14h1v1h-1zM10,14h1v1h-1zM11,14h1v1h-1zM14,14h1v1h-1zM15,14h1v1h-1zM16,14h1v1h-1zM19,14h1v1h-1zM20,14h1v1h-1zM24,14h1v1h-1zM25,14h1v1h-1zM1,15h1v1h-1zM2,15h1v1h-1zM4,15h1v1h-1zM6,15h1v1h-1zM7,15h1v1h-1zM8,15h1v1h-1zM9,15h1v1h-1zM10,15h1v1h-1zM12,15h1v1h-1zM16,15h1v1h-1zM19,15h1v1h-1zM22,15h1v1h-1zM23,15h1v1h-1zM25,15h1v1h-1zM3,16h1v1h-1zM5,16h1v1h-1zM8,16h1v1h-1zM10,16h1v1h-1zM11,16h1v1h-1zM14,16h1v1h-1zM16,16h1v1h-1zM17,16h1v1h-1zM18,16h1v1h-1zM20,16h1v1h-1zM21,16h1v1h-1zM22,16h1v1h-1zM1,17h1v1h-1zM2,17h1v1h-1zM7,17h1v1h-1zM9,17h1v1h-1zM10,17h1v1h-1zM12,17h1v1h-1zM13,17h1v1h-1zM14,17h1v1h-1zM16,17h1v1h-1zM17,17h1v1h-1zM18,17h1v1h-1zM19,17h1v1h-1zM20,17h1v1h-1zM21,17h1v1h-1zM24,17h1v1h-1zM9,18h1v1h-1zM10,18h1v1h-1zM11,18h1v1h-1zM13,18h1v1h-1zM17,18h1v1h-1zM21,18h1v1h-1zM25,18h1v1h-1zM1,19h1v1h-1zM2,19h1v1h-1zM3,19h1v1h-1zM4,19h1v1h-1zM5,19h1v1h-1zM6,19h1v1h-1zM7,19h1v1h-1zM9,19h1v1h-1zM13,19h1v1h-1zM14,19h1v1h-1zM15,19h1v1h-1zM17,19h1v1h-1zM19,19h1v1h-1zM21,19h1v1h-1zM25,19h1v1h-1zM1,20h1v1h-1zM7,20h1v1h-1zM12,20h1v1h-1zM13,20h1v1h-1zM15,20h1v1h-1zM16,20h1v1h-1zM17,20h1v1h-1zM21,20h1v1h-1zM25,20h1v1h-1zM1,21h1v1h-1zM3,21h1v1h-1zM4,21h1v1h-1zM5,21h1v1h-1zM7,21h1v1h-1zM10,21h1v1h-1zM11,21h1v1h-1zM14,21h1v1h-1zM15,21h1v1h-1zM16,21h1v1h-1zM17,21h1v1h-1zM18,21h1v1h-1zM19,21h1v1h-1zM20,21h1v1h-1zM21,21h1v1h-1zM24,21h1v1h-1zM25,21h1v1h-1zM1,22h1v1h-1zM3,22h1v1h-1zM4,22h1v1h-1zM5,22h1v1h-1zM7,22h1v1h-1zM11,22h1v1h-1zM14,22h1v1h-1zM15,22h1v1h-1zM16,22h1v1h-1zM18,22h1v1h-1zM21,22h1v1h-1zM23,22h1v1h-1zM24,22h1v1h-1zM1,23h1v1h-1zM3,23h1v1h-1zM4,23h1v1h-1zM5,23h1v1h-1zM7,23h1v1h-1zM9,23h1v1h-1zM10,23h1v1h-1zM11,23h1v1h-1zM12,23h1v1h-1zM16,23h1v1h-1zM17,23h1v1h-1zM18,23h1v1h-1zM20,23h1v1h-1zM21,23h1v1h-1zM22,23h1v1h-1zM24,23h1v1h-1zM25,23h1v1h-1zM1,24h1v1h-1zM7,24h1v1h-1zM14,24h1v1h-1zM17,24h1v1h-1zM18,24h1v1h-1zM19,24h1v1h-1zM20,24h1v1h-1zM21,24h1v1h-1zM1,25h1v1h-1zM2,25h1v1h-1zM3,25h1v1h-1zM4,25h1v1h-1zM5,25h1v1h-1zM6,25h1v1h-1zM7,25h1v1h-1zM9,25h1v1h-1zM10,25h1v1h-1zM12,25h1v1h-1zM13,25h1v1h-1zM14,25h1v1h-1zM17,25h1v1h-1zM19,25h1v1h-1zM22,25h1v1h-1zM25,25h1v1h-1z" fill="#14212b"/></svg><div><a class="pl" href="https://viemag.biz" target="_blank" rel="noopener" style="font-size:18px;font-weight:600">viemag.biz ↗</a><p style="margin:6px 0 0;color:var(--ink2)">${T(X.webd)}</p><div style="margin-top:8px;font-size:14px;display:flex;flex-wrap:wrap;gap:6px 14px">${WP.map(w=>`<a class="pl" href="https://viemag.biz/${w[0]}" target="_blank" rel="noopener">${T(w[1])} ↗</a>`).join('')}</div></div></div>
+ <h3>${T(X.cats)}</h3><div class="grid">${cats}</div>`;
+}
+
+let fCat='all',fQ='';
+function vFaq(){
+ const X={t:{zh:'客人常見問題',en:'Customer FAQ',vi:'Câu hỏi thường gặp'},s:{zh:'VIEMAG 參展問答。點題目展開答案，下方附另外兩種語言方便對照。',en:'VIEMAG booth Q&A. Tap a question to open it; the other two languages are shown below for reference.',vi:'Hỏi đáp tại gian hàng VIEMAG. Bấm vào câu hỏi để xem; bên dưới có hai ngôn ngữ còn lại để đối chiếu.'}};
+ const btn=(k,lab)=>`<button class="fbtn${fCat===k?' on':''}" data-fc="${k}">${lab}</button>`;
+ return `<h2>${T(X.t)}</h2><p class="sub">${T(X.s)}</p>
+ <div class="tools"><input type="search" id="fq" placeholder="${T(UI.search)}" value="${fQ.replace(/"/g,'&quot;')}"></div>
+ <div class="tools">${btn('all',T(UI.all))}${Object.keys(FC).map(k=>btn(k,T(FC[k]))).join('')}
+  <button class="fbtn" data-fx="1">${T(UI.expand)}</button><button class="fbtn" data-fx="0">${T(UI.collapse)}</button></div>
+ <div id="flist"></div>`;
+}
+function renderFaqList(){
+ const box=document.getElementById('flist'); if(!box) return;
+ const others=['zh','en','vi'].filter(x=>x!==L);
+ const q=fQ.trim().toLowerCase();
+ let i=0;
+ box.innerHTML=FAQ.map((f,idx)=>{
+  if(fCat!=='all'&&f.c!==fCat) return '';
+  const hay=(['zh','en','vi'].map(l=>f.q[l]+' '+f.a[l]).join(' ')).toLowerCase();
+  if(q&&!hay.includes(q)) return '';
+  i++;
+  const o=others.map(l=>`<div><b>${f.q[l]}</b><br>${f.a[l].replace(/⟦(.*?)⟧/g,'<span class="tbd">$1</span>')}</div>`).join('<div style="height:6px"></div>');
+  return `<details class="faq"><summary><span class="n">${idx+1}</span><span class="q">${T(f.q)}</span><span class="chip cat">${T(FC[f.c])}</span></summary>
+   <div class="ans"><p>${fmt(f.a)}</p>${f.tip?`<div class="tip">💡 ${T(f.tip)}</div>`:''}<div class="other">${o}</div></div></details>`;
+ }).join('')||`<p class="sub">—</p>`;
+}
+
+const PX={t:{zh:'報價單（建議售價）',en:'Price List (MSRP)',vi:'Bảng giá (giá bán lẻ đề xuất)'},
+  s:{zh:'建議售價 MSRP 為越南盾含稅零售價，可直接回覆 C 端客人。USD 為參考換算（1 USD = 25,834 ₫，2026-10-29）。B 端客人請收名片，展後報價。',en:'MSRP is the VND retail price — quote it directly to consumers. USD is for reference (1 USD = 25,834 ₫, 2026-10-29). For B2B visitors, take a card and quote after the show.',vi:'Giá bán lẻ đề xuất (MSRP) tính bằng VND, báo trực tiếp cho khách lẻ. USD chỉ để tham khảo (1 USD = 25.834 ₫, 29/10/2026). Khách B2B: xin danh thiếp, báo giá sau triển lãm.'},
+  h:[{zh:'SKU',en:'SKU',vi:'SKU'},{zh:'品名／規格',en:'Product / specs',vi:'Sản phẩm / thông số'},{zh:'類別',en:'Category',vi:'Loại'},{zh:'狀態',en:'Status',vi:'Trạng thái'},{zh:'建議售價 ₫',en:'MSRP ₫',vi:'Giá bán lẻ ₫'},{zh:'≈ USD',en:'≈ USD',vi:'≈ USD'},{zh:'成本 ₫',en:'Cost ₫',vi:'Giá vốn ₫'},{zh:'Shopee 市場價（中位數／區間）',en:'Shopee market (median / range)',vi:'Giá Shopee (trung vị / khoảng)'}],
+  sale:{zh:'已上架',en:'On sale',vi:'Đã đăng bán'},soon:{zh:'即將上市',en:'Coming soon',vi:'Sắp ra mắt'},
+  nf:{zh:'Shopee 找不到同類商品',en:'No comparable item on Shopee',vi:'Không tìm thấy trên Shopee'},
+  cn:{zh:'成本＝報價檔 sales_cost_usd × 25,834.04（2026-10-29 匯率），四捨五入到整數越南盾。P07 無成本資料。P05／P06 成本在報價檔兩個分頁互相對調（4.5／4.2 vs 4.2／4.5），暫用「Kết luận」分頁的數字，待確認。',en:'Cost = sales_cost_usd from the price file × 25,834.04 (rate of 2026-10-29), rounded to whole VND. No cost data for P07. P05/P06 costs are swapped between two sheets of the price file (4.5/4.2 vs 4.2/4.5); the "Kết luận" sheet is used for now, TBC.',vi:'Giá vốn = sales_cost_usd trong bảng giá × 25.834,04 (tỷ giá 29/10/2026), làm tròn đến đồng. P07 chưa có dữ liệu giá vốn. Giá vốn P05/P06 bị đảo giữa hai sheet của bảng giá (4,5/4,2 và 4,2/4,5); tạm dùng sheet "Kết luận", chưa xác nhận.'},
+  mk:{zh:'市場價僅供同事內部參考（Shopee 越南 2026-10-29，每個 SKU 只有 2–3 個樣本，多為折扣後價格），用來回答「為什麼比較貴」，不要主動給客人看。V02 最高價 999,999₫ 疑似佔位價。',en:'Market prices are for staff reference only (Shopee VN, 2026-10-29, only 2–3 listings per SKU, mostly after discounts) — use them to handle "why so expensive", don\'t show them to customers. V02 high of 999,999 ₫ looks like a placeholder price.',vi:'Giá thị trường chỉ để nhân viên tham khảo (Shopee VN, 29/10/2026, mỗi SKU chỉ 2–3 mẫu, phần lớn là giá sau giảm) — dùng để trả lời "sao đắt hơn", không đưa khách xem. Giá cao nhất 999.999₫ của V02 có thể là giá giữ chỗ.'}};
+function vPrice(){
+ const X=PX;
+ const rows=P.map(p=>{
+  const st=p.st?`<span class="chip ${p.st}">${T(X[p.st])}</span>`:'<span class="tbd">?</span>';
+  const m=p.mk?`${nf(p.mk[0])}<div class="mkt">${nf(p.mk[1])} – ${nf(p.mk[2])}</div>`:(p.msrp?`<span class="mkt">${T(X.nf)}</span>`:'');
+  return `<tr><td class="sku">${p.msrp?`<a href="${URL(p.sku)}" target="_blank" rel="noopener">${p.sku}</a>`:p.sku}</td><td>${T(p.n)}<div class="spec">${fmt(p.s)}</div></td><td><span class="chip cat">${T(CAT[p.cat])}</span></td><td>${st}</td>
+   <td class="num"><b>${p.msrp?nf(p.msrp):'<span class="tbd">TBC</span>'}</b></td><td class="num">${p.msrp?(p.msrp/FX).toFixed(2):''}</td><td class="num">${p.cu!=null?(['P05','P06'].includes(p.sku)?`<span class="tbd">${nf(Math.round(p.cu*FX))}</span>`:nf(Math.round(p.cu*FX))):'<span class="tbd">TBC</span>'}</td><td class="num">${m}</td></tr>`;}).join('');
+ return `<h2>${T(X.t)}</h2><p class="sub">${T(X.s)}</p>
+ <div class="btnrow"><button class="btn pri" data-xl="price">${T(EXL.btn)}</button></div>
+ <div class="tw"><table><thead><tr>${X.h.map((h,i)=>`<th${i>=4?' class="num"':''}>${T(h)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>
+ <p class="legend" style="margin-top:10px">ⓘ ${T(X.cn)}<br>ⓘ ${T(X.mk)}</p>`;
+}
+
+const NOTE={box:{zh:'彩盒包裝',en:'Retail box',vi:'Hộp màu'},acc:{zh:'含配件包，無彩盒',en:'Accessory pack, no retail box',vi:'Có túi phụ kiện, không hộp màu'},none:{zh:'無',en:'None',vi:'Không'},added:{zh:'追加項目',en:'Added item',vi:'Hạng mục bổ sung'}};
+const SAMDEF=SAM.map((r,i)=>{const nk={'彩盒':'box'};const n=r[6];let note='';
+ if(n){note=n.zh==='彩盒包裝'?'box':n.zh==='無'?'none':n.zh==='追加項目'?'added':'acc';}
+ return {id:'d'+i,sku:r[0]==='LIGHT'?'':r[0],name:r[0]==='LIGHT'?'@LIGHT':'',q:r[1]??'',b:r[2]??'',src:r[3],c:r[4]??'',size:r[5]||'',note,done:false};});
+function samRows(){let r=S.get('samrows',null);if(!Array.isArray(r)){r=JSON.parse(JSON.stringify(SAMDEF));const old=S.get('sam',{});r.forEach(x=>{if(old[x.sku||'LIGHT'])x.done=true});}return r;}
+function samSave(r){S.set('samrows',r);}
+const dispName=r=>r.name?(r.name==='@LIGHT'?T(LIGHT):r.name):(PM[r.sku]?T(PM[r.sku].n):'');
+const dispSrc=v=>{const x=SRC[v];return x==null?(v||''):(typeof x==='string'?x:T(x));};
+const dispNote=v=>NOTE[v]?T(NOTE[v]):(v||'');
+const esc=v=>String(v??'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+const SX={t:{zh:'樣品清單',en:'Sample List',vi:'Danh sách mẫu'},
+ s:{zh:'依 2026-10-21 樣品清單，可直接修改每一格、新增或刪除品項。所有修改只存在這台裝置；要給其他人時，用「複製清單」貼到 Excel 或 Zalo。',en:'Based on the 2026-10-21 sample list. Edit any cell, add or delete items. Changes are saved on this device only — use "Copy list" to paste into Excel or Zalo for others.',vi:'Theo danh sách mẫu ngày 21/10/2026. Có thể sửa từng ô, thêm hoặc xóa mục. Thay đổi chỉ lưu trên thiết bị này — dùng "Sao chép danh sách" để dán vào Excel hoặc Zalo gửi người khác.'},
+ h:[{zh:'✓',en:'✓',vi:'✓'},{zh:'#',en:'#',vi:'#'},{zh:'SKU',en:'SKU',vi:'SKU'},{zh:'品名',en:'Product',vi:'Sản phẩm'},{zh:'樣品數',en:'Samples',vi:'SL mẫu'},{zh:'彩盒數',en:'Retail boxes',vi:'SL hộp màu'},{zh:'來源／供應商',en:'Source / supplier',vi:'Nguồn / NCC'},{zh:'箱數',en:'Cartons',vi:'Số thùng'},{zh:'外箱尺寸',en:'Carton size',vi:'Kích thước thùng'},{zh:'備註',en:'Notes',vi:'Ghi chú'},{zh:'',en:'',vi:''}],
+ tot:{zh:'合計',en:'Total',vi:'Tổng'},
+ add:{zh:'＋ 新增品項',en:'+ Add item',vi:'+ Thêm mục'},
+ copy:{zh:'複製清單',en:'Copy list',vi:'Sao chép danh sách'},copied:{zh:'已複製 ✓',en:'Copied ✓',vi:'Đã sao chép ✓'},cfail:{zh:'無法複製',en:'Copy failed',vi:'Không sao chép được'},
+ def:{zh:'還原預設清單',en:'Restore default list',vi:'Khôi phục danh sách gốc'},sure:{zh:'再按一次確認還原',en:'Tap again to confirm',vi:'Bấm lần nữa để xác nhận'},
+ del:{zh:'刪除',en:'Delete',vi:'Xóa'},
+ gap:{zh:'黃色格子 = 數量未填，請補上。P07 不在報價檔中。',en:'Yellow cells = quantity missing, please fill in. P07 is not in the price file.',vi:'Ô màu vàng = chưa có số lượng, vui lòng điền. P07 không có trong bảng giá.'}};
+function vSamples(){
+ const rows=samRows(); const done=rows.filter(r=>r.done).length;
+ const inp=(r,f,val,cls,type)=>`<input class="ed ${cls}${(type==='number'&&(f==='q'||f==='b')&&val==='')?' empty':''}" data-id="${r.id}" data-f="${f}" ${type==='number'?'type="number" min="0" inputmode="numeric"':''} ${f==='sku'?'list="skulist"':''} value="${esc(val)}">`;
+ const body=rows.map((r,i)=>`<tr class="${r.done?'done':''}" data-row="${r.id}"><td><input type="checkbox" data-samck="${r.id}" ${r.done?'checked':''}></td><td>${i+1}</td>
+  <td>${inp(r,'sku',r.sku,'w-sku')}</td><td class="nm">${inp(r,'name',dispName(r),'w-name')}</td>
+  <td class="num">${inp(r,'q',r.q,'w-num','number')}</td><td class="num">${inp(r,'b',r.b,'w-num','number')}</td>
+  <td>${inp(r,'src',dispSrc(r.src),'w-src')}</td><td class="num">${inp(r,'c',r.c,'w-num','number')}</td>
+  <td>${inp(r,'size',r.size,'w-size')}</td><td>${inp(r,'note',dispNote(r.note),'w-note')}</td>
+  <td><button class="del" data-del="${r.id}" title="${T(SX.del)}" aria-label="${T(SX.del)}">✕</button></td></tr>`).join('');
+ return `<h2>${T(SX.t)}</h2><p class="sub">${T(SX.s)}</p>
+ <datalist id="skulist">${P.map(p=>`<option value="${p.sku}">${T(p.n)}</option>`).join('')}</datalist>
+ <div class="ckhead"><span class="cnt" id="samcnt">${done} / ${rows.length}</span><div class="bar"><i id="sambar" style="width:${rows.length?done/rows.length*100:0}%"></i></div></div>
+ <div class="btnrow"><button class="btn pri" data-samadd="1">${T(SX.add)}</button><button class="btn" data-xl="samples">${T(EXL.btn)}</button><button class="btn" data-samcopy="1">${T(SX.copy)}</button><button class="btn" data-samclr="1">${T(UI.reset)}</button><button class="btn" data-samdef="1">${T(SX.def)}</button></div>
+ <div class="tw"><table class="edt"><thead><tr>${SX.h.map((h,i)=>`<th${[4,5,7].includes(i)?' class="num"':''}>${T(h)}</th>`).join('')}</tr></thead><tbody>${body}</tbody>
+ <tfoot><tr><td colspan="4">${T(SX.tot)}</td><td class="num" id="tq"></td><td class="num" id="tb"></td><td></td><td class="num" id="tc"></td><td colspan="3"></td></tr></tfoot></table></div>
+ <p class="legend" style="margin-top:10px"><span class="tbd">&nbsp;&nbsp;</span> ${T(SX.gap)}</p>`;
+}
+function samTotals(){const r=samRows(),sum=f=>r.reduce((a,x)=>a+(parseFloat(x[f])||0),0);
+ const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=nf(v)};set('tq',sum('q'));set('tb',sum('b'));set('tc',sum('c'));
+ const d=r.filter(x=>x.done).length,c=document.getElementById('samcnt'),b=document.getElementById('sambar');
+ if(c)c.textContent=d+' / '+r.length;if(b)b.style.width=(r.length?d/r.length*100:0)+'%';}
+
+const CX={t:{zh:'展覽準備物品清單',en:'Booth Preparation Checklist',vi:'Danh mục chuẩn bị gian hàng'},
+ s:{zh:'可直接修改名稱、數量、負責人、備註，每個分類可新增或刪除項目。所有修改只存在這台裝置；要給其他人時，用「複製清單」貼到 Excel 或 Zalo。',en:'Edit names, qty, owners and notes directly; add or delete items in each section. Changes are saved on this device only — use "Copy list" to paste into Excel or Zalo for others.',vi:'Có thể sửa tên, số lượng, người phụ trách, ghi chú; thêm hoặc xóa mục trong từng nhóm. Thay đổi chỉ lưu trên thiết bị này — dùng "Sao chép danh sách" để dán vào Excel hoặc Zalo.'},
+ h:[{zh:'✓',en:'✓',vi:'✓'},{zh:'項目',en:'Item',vi:'Hạng mục'},{zh:'數量',en:'Qty',vi:'SL'},{zh:'負責人',en:'Owner',vi:'Phụ trách'},{zh:'備註',en:'Notes',vi:'Ghi chú'},{zh:'',en:'',vi:''}],
+ add:{zh:'＋ 新增項目',en:'+ Add item',vi:'+ Thêm mục'},
+ grp:{zh:'分類',en:'Section',vi:'Nhóm'}};
+const CKDEF=[{"g": {"zh": "展位結構與佈置", "en": "Booth structure & display", "vi": "Kết cấu & trang trí gian hàng"}, "items": [{"id": "0-0", "name": {"zh": "VIEMAG 海報（長／短）", "en": "VIEMAG posters (long / short)", "vi": "Poster VIEMAG (dài / ngắn)"}, "qty": {"zh": "9張", "en": "9", "vi": "9 tấm"}, "note": {"zh": "依 6m×3m 雙開口配置", "en": "Lay out for 6 m×3 m, 2 open sides", "vi": "Bố trí theo gian 6m×3m, mở 2 mặt"}, "owner": "Henry", "done": true}, {"id": "0-1", "name": {"zh": "樣品標籤卡（SKU／品名／售價，三語）", "en": "Sample tag cards (SKU / name / price, 3 languages)", "vi": "Thẻ tên mẫu (SKU / tên / giá, 3 ngôn ngữ)"}, "qty": {"zh": "16 張以上", "en": "16+", "vi": "16+ thẻ"}, "note": "", "owner": "", "done": true}, {"id": "0-2", "name": {"zh": "VIEMAG LOGO 大型貼紙", "en": "Large VIEMAG logo stickers", "vi": "Decal logo VIEMAG cỡ lớn"}, "qty": {"zh": "6張", "en": "6", "vi": "6 tấm"}, "note": "", "owner": "Henry", "done": true}, {"id": "0-3", "name": {"zh": "冷氣出風口治具", "en": "Air-vent demo fixture", "vi": "Mô hình cửa gió điều hòa"}, "qty": {"zh": "1", "en": "1", "vi": "1"}, "note": {"zh": "展示 V01", "en": "For V01 demo", "vi": "Trưng bày V01"}, "owner": "NANCY", "done": true}, {"id": "0-4", "name": {"zh": "玻璃展示板", "en": "Glass demo panel", "vi": "Tấm kính demo"}, "qty": {"zh": "1", "en": "1", "vi": "1"}, "note": {"zh": "讓客人測試真空吸盤 V02/V06–V09", "en": "Let customers test vacuum bases V02/V06–V09", "vi": "Cho khách thử đế hút chân không V02/V06–V09"}, "owner": "NANCY", "done": true}, {"id": "0-5", "name": {"zh": "健身器材把手／金屬管展示台", "en": "Gym handle / metal tube display", "vi": "Mô hình tay cầm gym / ống kim loại"}, "qty": {"zh": "1 組", "en": "1 set", "vi": "1 bộ"}, "note": {"zh": "展示 P02、P05、P06", "en": "For P02, P05, P06", "vi": "Trưng bày P02, P05, P06"}, "owner": "NANCY", "done": true}, {"id": "0-6", "name": {"zh": "小透明立牌座", "en": "Small clear stand holders", "vi": "Đế mica nhỏ"}, "qty": {"zh": "20 個", "en": "20", "vi": "20 cái"}, "note": {"zh": "確認是否需要", "en": "Confirm if needed", "vi": "Xác nhận có cần không"}, "owner": "WOODY", "done": false}, {"id": "0-7", "name": {"zh": "產品介紹 B5 立牌＋底座", "en": "B5 product info stands + bases", "vi": "Standee giới thiệu B5 + đế"}, "qty": {"zh": "10＋12 個", "en": "10 + 12", "vi": "10 + 12 cái"}, "note": "", "owner": "WOODY", "done": false}, {"id": "0-8", "name": {"zh": "磁吸展示台（大鐵板）", "en": "Magnetic display stands (large steel plates)", "vi": "Kệ trưng bày từ tính (tấm thép lớn)"}, "qty": {"zh": "2片", "en": "2", "vi": "2 tấm"}, "note": "", "owner": "WOODY/NANCY", "done": false}, {"id": "0-9", "name": {"zh": "大螢幕展示台（iPad）", "en": "Large screen display (iPad)", "vi": "Màn hình trưng bày (iPad)"}, "qty": {"zh": "1 台", "en": "1", "vi": "1 cái"}, "note": {"zh": "播放產品影片", "en": "Play product videos", "vi": "Chiếu video sản phẩm"}, "owner": "WOODY", "done": false}, {"id": "0-10", "name": {"zh": "QR Code 立牌（viemag.biz）", "en": "QR code stand (viemag.biz)", "vi": "Standee mã QR (viemag.biz)"}, "qty": {"zh": "1個", "en": "1", "vi": "1 cái"}, "note": "", "owner": "MAI", "done": false}, {"id": "0-11", "name": {"zh": "QR Code 立牌（Vietcombank）", "en": "QR code stand (Vietcombank)", "vi": "Standee mã QR (Vietcombank)"}, "qty": {"zh": "1個", "en": "1", "vi": "1 cái"}, "note": "", "owner": "MAI", "done": false}, {"id": "0-12", "name": {"zh": "QR Code 立牌（Zalo）", "en": "QR code stand (Zalo)", "vi": "Standee mã QR (Zalo)"}, "qty": {"zh": "1個", "en": "1", "vi": "1 cái"}, "note": "", "owner": "MAI", "done": false}]}, {"g": {"zh": "行銷物料與文件", "en": "Marketing materials & documents", "vi": "Tài liệu marketing & giấy tờ"}, "items": [{"id": "1-0", "name": {"zh": "peripower 磁吸環贈品", "en": "peripower magnetic ring giveaways", "vi": "Quà tặng vòng hít từ peripower"}, "qty": {"zh": "數量待確認", "en": "Qty TBC", "vi": "SL chưa xác nhận"}, "note": {"zh": "吸引客人停留", "en": "To attract visitors", "vi": "Thu hút khách dừng lại"}, "owner": "nancy", "done": true}, {"id": "1-1", "name": {"zh": "展覽邀請函／參展證明／參展證 印製", "en": "Print invitation / exhibitor proof / badges", "vi": "In thư mời / giấy xác nhận / thẻ triển lãm"}, "qty": {"zh": "1份", "en": "1", "vi": "1 bộ"}, "note": "", "owner": "MAI", "done": false}, {"id": "1-2", "name": {"zh": "展場備用金", "en": "Petty cash", "vi": "Tiền mặt dự phòng"}, "qty": {"zh": "一千萬 ₫", "en": "10,000,000 ₫", "vi": "10.000.000 ₫"}, "note": {"zh": "越南盾現金", "en": "VND cash", "vi": "Tiền mặt VND"}, "owner": "阿水", "done": false}, {"id": "1-3", "name": {"zh": "VIEMAG 紙本型錄", "en": "VIEMAG printed catalogue", "vi": "Catalogue VIEMAG bản in"}, "qty": {"zh": "待確認", "en": "TBC", "vi": "Chưa xác nhận"}, "note": "", "owner": "woody", "done": false}, {"id": "1-4", "name": {"zh": "電子型錄（QR）", "en": "E-catalogue (QR)", "vi": "Catalogue điện tử (QR)"}, "qty": {"zh": "1 份", "en": "1", "vi": "1"}, "note": "", "owner": "woody", "done": false}, {"id": "1-5", "name": {"zh": "產品 DM／單頁傳單（越文）", "en": "Product flyers (Vietnamese)", "vi": "Tờ rơi sản phẩm (tiếng Việt)"}, "qty": {"zh": "60 份", "en": "60", "vi": "60 tờ"}, "note": "", "owner": "Woody", "done": false}, {"id": "1-6", "name": {"zh": "建議售價表（列印，越／英）", "en": "Printed MSRP list (VI / EN)", "vi": "Bảng giá bán lẻ in sẵn (VI / EN)"}, "qty": {"zh": "2 份", "en": "2", "vi": "2 bản"}, "note": {"zh": "取自本手冊「報價單」頁", "en": "From the Price List tab", "vi": "Lấy từ tab Bảng giá"}, "owner": "nancy/阿水", "done": false}, {"id": "1-7", "name": {"zh": "VIEMAG 名片（越／英）", "en": "VIEMAG business cards (VI / EN)", "vi": "Danh thiếp VIEMAG (VI / EN)"}, "qty": {"zh": "每位業務", "en": "Each salesperson", "vi": "Mỗi nhân viên KD"}, "note": {"zh": "⟦待確認⟧", "en": "⟦TBC⟧", "vi": "⟦chưa xác nhận⟧"}, "owner": "woody", "done": false}, {"id": "1-8", "name": {"zh": "客戶洽談記錄本", "en": "Customer meeting log books", "vi": "Sổ ghi chép khách hàng"}, "qty": {"zh": "4 本", "en": "4", "vi": "4 quyển"}, "note": {"zh": "記錄 B/C、需求、品項、數量", "en": "Log B/C, needs, SKUs, qty", "vi": "Ghi B/C, nhu cầu, SKU, số lượng"}, "owner": "nancy", "done": true}, {"id": "1-9", "name": {"zh": "PERIPOWER 提袋", "en": "PERIPOWER tote bags", "vi": "Túi PERIPOWER"}, "qty": {"zh": "40", "en": "40", "vi": "40"}, "note": "", "owner": "NANCY", "done": true}]}, {"g": {"zh": "電子設備與示範", "en": "Electronics & demo", "vi": "Thiết bị điện tử & demo"}, "items": [{"id": "2-0", "name": {"zh": "手機樣機（iPhone 12 以後，MagSafe）", "en": "Demo phones (iPhone 12+, MagSafe)", "vi": "Điện thoại mẫu (iPhone 12 trở lên, MagSafe)"}, "qty": {"zh": "4 台", "en": "4", "vi": "4 cái"}, "note": {"zh": "充飽電", "en": "Fully charged", "vi": "Sạc đầy"}, "owner": "NANCY", "done": false}, {"id": "2-1", "name": {"zh": "安卓手機＋引磁環", "en": "Android phone + magnetic ring", "vi": "Điện thoại Android + vòng hít từ"}, "qty": {"zh": "1 台", "en": "1", "vi": "1 cái"}, "note": {"zh": "示範非 MagSafe 手機也能用", "en": "Show non-MagSafe compatibility", "vi": "Demo điện thoại không MagSafe"}, "owner": "HENRY", "done": true}, {"id": "2-2", "name": {"zh": "USB-C 充電頭", "en": "USB-C chargers", "vi": "Củ sạc USB-C"}, "qty": {"zh": "5", "en": "5", "vi": "5"}, "note": "", "owner": "NANCY", "done": true}, {"id": "2-3", "name": {"zh": "Type-C 線（C>C ×5、A>C ×2）", "en": "Type-C cables (C>C ×5, A>C ×2)", "vi": "Cáp Type-C (C>C ×5, A>C ×2)"}, "qty": {"zh": "7 條", "en": "7", "vi": "7 sợi"}, "note": "", "owner": "NANCY", "done": true}, {"id": "2-4", "name": {"zh": "平板電腦（展示本手冊／型錄／點單）", "en": "Tablet (this handbook / catalogue / orders)", "vi": "Máy tính bảng (sổ tay này / catalogue / đơn hàng)"}, "qty": {"zh": "1 台", "en": "1", "vi": "1 cái"}, "note": "", "owner": "", "done": false}, {"id": "2-5", "name": {"zh": "補光燈", "en": "Fill light", "vi": "Đèn trợ sáng"}, "qty": {"zh": "2 個", "en": "2", "vi": "2 cái"}, "note": {"zh": "見樣品清單", "en": "See sample list", "vi": "Xem danh sách mẫu"}, "owner": "", "done": false}, {"id": "2-6", "name": {"zh": "小編手機（社群發文）", "en": "Social media phone", "vi": "Điện thoại đăng mạng xã hội"}, "qty": {"zh": "1 台", "en": "1", "vi": "1 cái"}, "note": "", "owner": "阿水", "done": true}, {"id": "2-7", "name": {"zh": "多孔電源供應器（UGREEN）", "en": "Multi-port power supply (UGREEN)", "vi": "Bộ nguồn nhiều cổng (UGREEN)"}, "qty": {"zh": "1", "en": "1", "vi": "1"}, "note": {"zh": "越南 220V，插座 A/C 型", "en": "Vietnam 220 V, type A/C sockets", "vi": "Điện 220V, ổ cắm loại A/C"}, "owner": "NANCY", "done": true}, {"id": "2-8", "name": {"zh": "延長線", "en": "Extension cords", "vi": "Ổ cắm kéo dài"}, "qty": {"zh": "3", "en": "3", "vi": "3"}, "note": "", "owner": "NANCY", "done": true}]}, {"g": {"zh": "文具與工具", "en": "Stationery & tools", "vi": "Văn phòng phẩm & dụng cụ"}, "items": [{"id": "3-0", "name": {"zh": "掛勾", "en": "Hooks", "vi": "Móc treo"}, "qty": {"zh": "25 件", "en": "25", "vi": "25 cái"}, "note": {"zh": "掛海報或展品", "en": "For posters / products", "vi": "Treo poster / sản phẩm"}, "owner": "HENRY", "done": true}, {"id": "3-1", "name": {"zh": "大夾子", "en": "Large clips", "vi": "Kẹp lớn"}, "qty": {"zh": "2 個", "en": "2", "vi": "2 cái"}, "note": "", "owner": "NANCY", "done": true}, {"id": "3-2", "name": {"zh": "膠帶（寬 1、窄 1）／雙面膠（寬 1、窄 1）", "en": "Tape (1 wide, 1 narrow) / double-sided tape (1 wide, 1 narrow)", "vi": "Băng keo (1 to, 1 nhỏ) / keo 2 mặt (1 to, 1 nhỏ)"}, "qty": {"zh": "4", "en": "4", "vi": "4"}, "note": "", "owner": "NANCY", "done": true}, {"id": "3-3", "name": {"zh": "訂書機＆針", "en": "Stapler & staples", "vi": "Bấm ghim & ghim"}, "qty": {"zh": "2 組", "en": "2 sets", "vi": "2 bộ"}, "note": "", "owner": "NANCY", "done": true}, {"id": "3-4", "name": {"zh": "刀片、剪刀", "en": "Cutters, scissors", "vi": "Dao rọc giấy, kéo"}, "qty": {"zh": "各 2 把", "en": "2 each", "vi": "Mỗi loại 2"}, "note": "", "owner": "NANCY", "done": true}, {"id": "3-5", "name": {"zh": "螢光筆／麥克筆／原子筆（檢查有沒有水）", "en": "Highlighters / markers / pens (check ink)", "vi": "Bút dạ quang / bút lông / bút bi (kiểm tra mực)"}, "qty": {"zh": "3／2／5 支", "en": "3 / 2 / 5", "vi": "3 / 2 / 5 cây"}, "note": "", "owner": "NANCY", "done": true}, {"id": "3-6", "name": {"zh": "十字螺絲起子", "en": "Phillips screwdriver", "vi": "Tua vít 4 cạnh"}, "qty": {"zh": "1", "en": "1", "vi": "1"}, "note": "", "owner": "NANCY", "done": true}, {"id": "3-7", "name": {"zh": "磁力顯示片", "en": "Magnetic field viewer film", "vi": "Phim hiển thị từ trường"}, "qty": {"zh": "1片", "en": "1", "vi": "1 tấm"}, "note": {"zh": "在紅色透明拉鍊袋", "en": "In red clear zip bag", "vi": "Trong túi zip trong màu đỏ"}, "owner": "NANCY", "done": true}, {"id": "3-8", "name": {"zh": "酒精濕紙巾／超細纖維布", "en": "Alcohol wipes / microfiber cloths", "vi": "Khăn ướt cồn / khăn sợi nhỏ"}, "qty": {"zh": "適量", "en": "As needed", "vi": "Đủ dùng"}, "note": {"zh": "清潔吸盤與展示面", "en": "Clean suction bases & demo surfaces", "vi": "Lau đế hút và bề mặt demo"}, "owner": "MAI", "done": true}, {"id": "3-9", "name": {"zh": "抹布、衛生紙、垃圾袋", "en": "Rags, tissues, trash bags", "vi": "Giẻ lau, khăn giấy, túi rác"}, "qty": {"zh": "3／2／4 ⟦待確認⟧", "en": "3 / 2 / 4 ⟦TBC⟧", "vi": "3 / 2 / 4 ⟦chưa xác nhận⟧"}, "note": "", "owner": "MAI", "done": true}, {"id": "3-10", "name": {"zh": "糖果／小零食（吸客）", "en": "Candy / snacks (for visitors)", "vi": "Kẹo / đồ ăn nhẹ (mời khách)"}, "qty": {"zh": "適量", "en": "As needed", "vi": "Đủ dùng"}, "note": "", "owner": "MAI", "done": true}, {"id": "3-11", "name": {"zh": "行李秤", "en": "Luggage scale", "vi": "Cân hành lý"}, "qty": {"zh": "1 個", "en": "1", "vi": "1 cái"}, "note": "", "owner": "HENRY", "done": true}]}];
+function ckData(){let d=S.get('ckrows3',null);if(!Array.isArray(d)){d=JSON.parse(JSON.stringify(CKDEF));}return d;}
+function ckSave(d){S.set('ckrows3',d);}
+const tv=v=>v==null?'':(typeof v==='string'?v:T(v)).replace(/⟦(.*?)⟧/g,'$1');
+const isTbd=v=>v&&typeof v==='object'&&/⟦/.test(T(v));
+function vChecklist(){
+ const d=ckData(), nw={zh:'新增',en:'New',vi:'Mới'};
+ const inp=(x,f,cls)=>`<input class="ced ${cls}${isTbd(x[f])?' empty':''}" data-cid="${x.id}" data-f="${f}" value="${esc(tv(x[f]))}"${f==='owner'?` placeholder="${T(UI.owner)}"`:''}>`;
+ return `<h2>${T(CX.t)}</h2><p class="sub">${T(CX.s)}</p>
+ <div class="btnrow"><button class="btn pri" data-xl="checklist">${T(EXL.btn)}</button><button class="btn" data-ckcopy="1">${T(SX.copy)}</button><button class="btn" data-ckclr="1">${T(UI.reset)}</button><button class="btn" data-ckdef="1">${T(SX.def)}</button></div>`+
+ d.map((g,gi)=>{const n=g.items.length,dn=g.items.filter(x=>x.done).length;
+  return `<div class="ckhead"><h3>${tv(g.g)}</h3><span class="cnt" data-gc="${gi}">${dn} / ${n}</span><div class="bar"><i data-gb="${gi}" style="width:${n?dn/n*100:0}%"></i></div></div>
+  <div class="tw"><table class="edt"><thead><tr>${CX.h.map(h=>`<th>${T(h)}</th>`).join('')}</tr></thead><tbody>${
+   g.items.map(x=>`<tr class="${x.done?'done':''}"><td><input type="checkbox" data-ckid="${x.id}" data-g="${gi}" ${x.done?'checked':''}></td>
+    <td class="nm"><div style="display:flex;align-items:center;gap:4px">${inp(x,'name','w-name')}${x.isNew?`<span class="new">${T(nw)}</span>`:''}</div></td>
+    <td>${inp(x,'qty','w-qty')}</td><td>${inp(x,'owner','w-own')}</td><td>${inp(x,'note','w-note')}</td>
+    <td><button class="del" data-ckdel="${x.id}" title="${T(SX.del)}" aria-label="${T(SX.del)}">✕</button></td></tr>`).join('')
+  }</tbody></table></div><div class="btnrow"><button class="btn pri" data-ckadd="${gi}">${T(CX.add)}</button></div>`;}).join('');
+}
+function ckCounts(){const d=ckData();d.forEach((g,gi)=>{const n=g.items.length,dn=g.items.filter(x=>x.done).length;const c=document.querySelector(`[data-gc="${gi}"]`),b=document.querySelector(`[data-gb="${gi}"]`);if(c)c.textContent=dn+' / '+n;if(b)b.style.width=(n?dn/n*100:0)+'%';});}
+function ckFind(d,id){for(const g of d){const x=g.items.find(y=>y.id===id);if(x)return [g,x];}return [null,null];}
+
+/* ---------- minimal XLSX writer (no external library, works offline) ---------- */
+const XL=(()=>{
+ const crcT=(()=>{const t=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0}return t})();
+ const crc=b=>{let c=0xFFFFFFFF;for(let i=0;i<b.length;i++)c=crcT[(c^b[i])&255]^(c>>>8);return (c^0xFFFFFFFF)>>>0};
+ const enc=new TextEncoder();
+ function zip(files){const parts=[],cd=[];let off=0;
+  for(const [name,str] of files){const nb=enc.encode(name),db=enc.encode(str),c=crc(db);
+   const h=new DataView(new ArrayBuffer(30));h.setUint32(0,0x04034b50,true);h.setUint16(4,20,true);h.setUint16(6,0x0800,true);h.setUint16(8,0,true);h.setUint32(14,c,true);h.setUint32(18,db.length,true);h.setUint32(22,db.length,true);h.setUint16(26,nb.length,true);
+   parts.push(new Uint8Array(h.buffer),nb,db);
+   const d=new DataView(new ArrayBuffer(46));d.setUint32(0,0x02014b50,true);d.setUint16(4,20,true);d.setUint16(6,20,true);d.setUint16(8,0x0800,true);d.setUint32(16,c,true);d.setUint32(20,db.length,true);d.setUint32(24,db.length,true);d.setUint16(28,nb.length,true);d.setUint32(42,off,true);
+   cd.push(new Uint8Array(d.buffer),nb);off+=30+nb.length+db.length;}
+  const cdLen=cd.reduce((a,b)=>a+b.length,0);const e=new DataView(new ArrayBuffer(22));e.setUint32(0,0x06054b50,true);e.setUint16(8,files.length,true);e.setUint16(10,files.length,true);e.setUint32(12,cdLen,true);e.setUint32(16,off,true);
+  return new Blob([...parts,...cd,new Uint8Array(e.buffer)],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'});}
+ const x=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g,'');
+ const col=i=>{let s='';i++;while(i>0){const m=(i-1)%26;s=String.fromCharCode(65+m)+s;i=Math.floor((i-1)/26)}return s};
+ /* styles: 0 normal(wrap) 1 header 2 #,##0 3 0.00 4 total label 5 total #,##0 6 title */
+ const STY=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><numFmts count="1"><numFmt numFmtId="164" formatCode="#,##0"/></numFmts><fonts count="4"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><color rgb="FFFFFFFF"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="14"/><name val="Calibri"/></font></fonts><fills count="4"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FF0E5E6F"/></patternFill></fill><fill><patternFill patternType="solid"><fgColor rgb="FFEEF3F5"/></patternFill></fill></fills><borders count="2"><border/><border><left style="thin"><color rgb="FFD0D7DC"/></left><right style="thin"><color rgb="FFD0D7DC"/></right><top style="thin"><color rgb="FFD0D7DC"/></top><bottom style="thin"><color rgb="FFD0D7DC"/></bottom></border></borders><cellStyleXfs count="1"><xf/></cellStyleXfs><cellXfs count="7"><xf borderId="1" applyBorder="1" applyAlignment="1"><alignment vertical="top" wrapText="1"/></xf><xf fontId="1" fillId="2" borderId="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center" wrapText="1"/></xf><xf numFmtId="164" borderId="1" applyNumberFormat="1" applyBorder="1" applyAlignment="1"><alignment vertical="top"/></xf><xf numFmtId="2" borderId="1" applyNumberFormat="1" applyBorder="1" applyAlignment="1"><alignment vertical="top"/></xf><xf fontId="2" fillId="3" borderId="1" applyFont="1" applyFill="1" applyBorder="1"/><xf numFmtId="164" fontId="2" fillId="3" borderId="1" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1"/><xf fontId="3" applyFont="1"/></cellXfs></styleSheet>`;
+ /* rows: array of arrays of cells; cell = value | {v, s, f}. opts: {widths, freeze(rowIndex of header), title} */
+ function sheet(rows,o){let xml='';rows.forEach((r,ri)=>{xml+=`<row r="${ri+1}">`;r.forEach((c,ci)=>{if(c==null||c==='')return;const cc=(typeof c==='object')?c:{v:c};const ref=col(ci)+(ri+1);const s=cc.s??0;
+   if(cc.f)xml+=`<c r="${ref}" s="${s}"><f>${x(cc.f)}</f></c>`;
+   else if(typeof cc.v==='number'&&isFinite(cc.v))xml+=`<c r="${ref}" s="${s}"><v>${cc.v}</v></c>`;
+   else if(cc.v!=null&&cc.v!=='')xml+=`<c r="${ref}" s="${s}" t="inlineStr"><is><t xml:space="preserve">${x(cc.v)}</t></is></c>`;});xml+='</row>';});
+  const fr=o.freeze?`<sheetViews><sheetView workbookViewId="0"><pane ySplit="${o.freeze}" topLeftCell="A${o.freeze+1}" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>`:'';
+  const cols=o.widths?`<cols>${o.widths.map((w,i)=>`<col min="${i+1}" max="${i+1}" width="${w}" customWidth="1"/>`).join('')}</cols>`:'';
+  const af=o.filter?`<autoFilter ref="${o.filter}"/>`:'';
+  return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">${fr}${cols}<sheetData>${xml}</sheetData>${af}</worksheet>`;}
+ function book(sheetName,rows,o){const nm=x(sheetName.replace(/[\\\/\?\*\[\]:]/g,' ').slice(0,31));
+  return zip([
+   ['[Content_Types].xml','<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>'],
+   ['_rels/.rels','<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>'],
+   ['xl/workbook.xml',`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="${nm}" sheetId="1" r:id="rId1"/></sheets>${o.filter?`<definedNames><definedName name="_xlnm._FilterDatabase" localSheetId="0" hidden="1">'${nm}'!$${o.filter.replace(':',':$').replace(/([A-Z]+)(\d+)/g,'$1$$$2')}</definedName></definedNames>`:''}</workbook>`],
+   ['xl/_rels/workbook.xml.rels','<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>'],
+   ['xl/styles.xml',STY],
+   ['xl/worksheets/sheet1.xml',sheet(rows,o)]]);}
+ return {book,col};
+})();
+const today=()=>{const d=new Date();return d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')};
+const EXL={btn:{zh:'匯出 Excel',en:'Export Excel',vi:'Xuất Excel'},ok:{zh:'已匯出 ✓',en:'Exported ✓',vi:'Đã xuất ✓'},no:{zh:'已取消',en:'Cancelled',vi:'Đã hủy'},fail:{zh:'無法匯出',en:'Export failed',vi:'Không xuất được'}};
+let DL=null; try{ if(window.claude&&window.claude.use) window.claude.use('downloads').then(d=>{DL=d}).catch(()=>{}); }catch(e){}
+async function saveXlsx(btn,filename,blob){
+ const lab=btn.textContent; const done=(m)=>{btn.textContent=T(m);setTimeout(()=>{if(btn.isConnected)btn.textContent=T(EXL.btn)},2500)};
+ try{
+  if(!DL&&window.claude&&window.claude.use){try{DL=await window.claude.use('downloads')}catch(e){}}
+  if(DL){ await DL.save({filename,data:blob}); done(EXL.ok); return; }
+  const url=URL_.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download=filename; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL_.revokeObjectURL(url),5000); done(EXL.ok);
+ }catch(err){ done(err&&err.code==='declined'?EXL.no:EXL.fail); }
+}
+const URL_=window.URL;
+const H=a=>a.map(h=>({v:T(h),s:1}));
+function xPrice(){
+ const X=PX; const hdr=[{zh:'SKU',en:'SKU',vi:'SKU'},{zh:'品名',en:'Product',vi:'Sản phẩm'},{zh:'規格',en:'Specs',vi:'Thông số'},{zh:'類別',en:'Category',vi:'Loại'},{zh:'狀態',en:'Status',vi:'Trạng thái'},{zh:'建議售價 ₫',en:'MSRP ₫',vi:'Giá bán lẻ ₫'},{zh:'≈ USD',en:'≈ USD',vi:'≈ USD'},{zh:'成本 ₫',en:'Cost ₫',vi:'Giá vốn ₫'},{zh:'Shopee 中位數 ₫',en:'Shopee median ₫',vi:'Shopee trung vị ₫'},{zh:'Shopee 最低 ₫',en:'Shopee low ₫',vi:'Shopee thấp nhất ₫'},{zh:'Shopee 最高 ₫',en:'Shopee high ₫',vi:'Shopee cao nhất ₫'},{zh:'官網',en:'Website',vi:'Website'}];
+ const rows=[H(hdr)];
+ P.forEach(p=>rows.push([p.sku,T(p.n),tv(p.s),T(CAT[p.cat]),p.st?T(X[p.st]):'',p.msrp?{v:p.msrp,s:2}:'',p.msrp?{v:Math.round(p.msrp/FX*100)/100,s:3}:'',p.cu!=null?{v:Math.round(p.cu*FX),s:2}:'',p.mk?{v:p.mk[0],s:2}:'',p.mk?{v:p.mk[1],s:2}:'',p.mk?{v:p.mk[2],s:2}:'',p.msrp?URL(p.sku):'']));
+ rows.push([]);rows.push([T(X.cn)]);rows.push([T(X.mk)]);
+ return XL.book(T(UI.price),rows,{freeze:1,widths:[8,34,60,14,14,14,9,13,16,15,15,40],filter:'A1:L'+(P.length+1)});
+}
+function xSamples(){
+ const r=samRows(); const hdr=SX.h.slice(1,10).concat([{zh:'已點收',en:'Checked',vi:'Đã kiểm'}]);
+ const rows=[H(hdr)]; const num=v=>v===''||v==null?'':(isNaN(+v)?v:{v:+v,s:2});
+ r.forEach((x,i)=>rows.push([i+1,x.sku,dispName(x),num(x.q),num(x.b),dispSrc(x.src),num(x.c),x.size,dispNote(x.note),x.done?'✓':'']));
+ const n=r.length+1; rows.push([{v:T(SX.tot),s:4},{v:'',s:4},{v:'',s:4},{f:`SUM(D2:D${n})`,s:5},{f:`SUM(E2:E${n})`,s:5},{v:'',s:4},{f:`SUM(G2:G${n})`,s:5},{v:'',s:4},{v:'',s:4},{v:'',s:4}]);
+ return XL.book(T(UI.samples),rows,{freeze:1,widths:[5,8,40,10,12,22,9,16,28,9]});
+}
+function xChecklist(){
+ const d=ckData(); const hdr=[CX.grp,CX.h[1],CX.h[2],CX.h[3],CX.h[4],{zh:'✓',en:'✓',vi:'✓'}];
+ const rows=[H(hdr)]; d.forEach(g=>g.items.forEach(x=>rows.push([tv(g.g),tv(x.name),tv(x.qty),x.owner||'',tv(x.note),x.done?'✓':''])));
+ return XL.book(T(UI.checklist),rows,{freeze:1,widths:[22,44,16,16,34,5],filter:'A1:F'+rows.length});
+}
+
+/* ---------- router & events ---------- */
+const VIEWS={overview:vOverview,faq:vFaq,price:vPrice,samples:vSamples,checklist:vChecklist};
+function cur(){const h=location.hash.replace('#','');return VIEWS[h]?h:'overview'}
+function render(){
+ document.documentElement.lang=L==='zh'?'zh-Hant':L;
+ document.querySelectorAll('[data-t]').forEach(e=>e.innerHTML=T(UI[e.dataset.t]));
+ document.querySelectorAll('[data-lang]').forEach(b=>b.classList.toggle('on',b.dataset.lang===L));
+ const v=cur();
+ document.querySelectorAll('nav a').forEach(a=>{a.textContent=T(UI[a.dataset.v]);a.classList.toggle('on',a.dataset.v===v)});
+ document.querySelectorAll('main section').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));
+ const sec=document.getElementById('v-'+v); sec.innerHTML=VIEWS[v]();
+ if(v==='faq') renderFaqList();
+ if(v==='samples') samTotals();
+}
+window.addEventListener('hashchange',()=>{render();window.scrollTo(0,0)});
+document.addEventListener('click',e=>{
+ const t=e.target;
+ if(t.dataset.lang){L=t.dataset.lang;S.set('lang',L);render();}
+ if(t.dataset.fc){fCat=t.dataset.fc;document.querySelectorAll('[data-fc]').forEach(b=>b.classList.toggle('on',b.dataset.fc===fCat));renderFaqList();}
+ if(t.dataset.fx){document.querySelectorAll('details.faq').forEach(d=>d.open=t.dataset.fx==='1');}
+ if(t.dataset.reset){S.set(t.dataset.reset,{});render();}
+ if(t.dataset.xl){const k=t.dataset.xl;const nm={price:'PriceList',samples:'Samples',checklist:'Checklist'}[k];const blob={price:xPrice,samples:xSamples,checklist:xChecklist}[k]();saveXlsx(t,`VIEMAG_${nm}_${today()}.xlsx`,blob);}
+ if(t.dataset.ckadd!=null&&t.dataset.ckadd!==undefined&&t.dataset.ckadd!==''){const d=ckData();const id='u'+Date.now();d[+t.dataset.ckadd].items.push({id,name:'',qty:'',note:'',owner:'',done:false});ckSave(d);render();const e=document.querySelector(`[data-cid="${id}"][data-f="name"]`);if(e){e.focus();e.scrollIntoView({block:'center'});}}
+ if(t.dataset.ckdel){const d=ckData();d.forEach(g=>g.items=g.items.filter(x=>x.id!==t.dataset.ckdel));ckSave(d);render();}
+ if(t.dataset.ckclr){const d=ckData();d.forEach(g=>g.items.forEach(x=>x.done=false));ckSave(d);render();}
+ if(t.dataset.ckdef){if(t.dataset.arm){S.set('ckrows3',null);render();}else{t.dataset.arm='1';t.textContent=T(SX.sure);t.classList.add('warn');setTimeout(()=>{if(t.isConnected){delete t.dataset.arm;t.textContent=T(SX.def);t.classList.remove('warn')}},4000);}}
+ if(t.dataset.ckcopy){const d=ckData();const H=[CX.grp,CX.h[1],CX.h[2],CX.h[3],CX.h[4]].map(T).concat(['✓']);
+  const lines=[H.join('\t')];d.forEach(g=>g.items.forEach(x=>lines.push([tv(g.g),tv(x.name),tv(x.qty),x.owner||'',tv(x.note),x.done?'✓':''].join('\t'))));
+  const ok=()=>{t.textContent=T(SX.copied);setTimeout(()=>{if(t.isConnected)t.textContent=T(SX.copy)},2000)},bad=()=>{t.textContent=T(SX.cfail)};
+  try{navigator.clipboard.writeText(lines.join('\n')).then(ok,bad)}catch(err){bad()}}
+ if(t.dataset.samadd){const r=samRows();const id='u'+Date.now();r.push({id,sku:'',name:'',q:'',b:'',src:'',c:'',size:'',note:'',done:false});samSave(r);render();const e=document.querySelector(`[data-id="${id}"][data-f="sku"]`);if(e){e.focus();e.scrollIntoView({block:'center'});}}
+ if(t.dataset.del){samSave(samRows().filter(x=>x.id!==t.dataset.del));render();}
+ if(t.dataset.samclr){const r=samRows();r.forEach(x=>x.done=false);samSave(r);render();}
+ if(t.dataset.samdef){if(t.dataset.arm){S.set('samrows',null);S.set('sam',{});render();}else{t.dataset.arm='1';t.textContent=T(SX.sure);t.classList.add('warn');setTimeout(()=>{if(t.isConnected){delete t.dataset.arm;t.textContent=T(SX.def);t.classList.remove('warn')}},4000);}}
+ if(t.dataset.samcopy){const r=samRows();const H=SX.h.slice(1,10).map(T);
+  const lines=[H.join('\t')].concat(r.map((x,i)=>[i+1,x.sku,dispName(x),x.q,x.b,dispSrc(x.src),x.c,x.size,dispNote(x.note)].join('\t')));
+  const ok=()=>{t.textContent=T(SX.copied);setTimeout(()=>{if(t.isConnected)t.textContent=T(SX.copy)},2000)},bad=()=>{t.textContent=T(SX.cfail)};
+  try{navigator.clipboard.writeText(lines.join('\n')).then(ok,bad)}catch(err){bad()}}
+});
+document.addEventListener('input',e=>{
+ const t=e.target;
+ if(t.id==='fq'){fQ=t.value;renderFaqList();}
+ if(t.dataset.ow){const o=S.get('ow',{});o[t.dataset.ow]=t.value;S.set('ow',o);}
+ if(t.classList.contains('ced')){const d=ckData();const [g,x]=ckFind(d,t.dataset.cid);if(!x)return;x[t.dataset.f]=t.value;t.classList.remove('empty');ckSave(d);}
+ if(t.classList.contains('ed')){const r=samRows();const x=r.find(y=>y.id===t.dataset.id);if(!x)return;const f=t.dataset.f;let v=t.value;
+  if(f==='sku'){v=v.trim().toUpperCase();x.sku=v;if(!x.name){const n=document.querySelector(`[data-id="${x.id}"][data-f="name"]`);if(n)n.value=dispName(x);}}
+  else x[f]=v;
+  if(f==='q'||f==='b')t.classList.toggle('empty',v==='');
+  samSave(r);samTotals();}
+});
+document.addEventListener('change',e=>{
+ const t=e.target;
+ if(t.dataset.samck){const r=samRows();const x=r.find(y=>y.id===t.dataset.samck);if(x){x.done=t.checked;samSave(r);}t.closest('tr').classList.toggle('done',t.checked);samTotals();}
+ if(t.dataset.ckid){const d=ckData();const [g,x]=ckFind(d,t.dataset.ckid);if(x){x.done=t.checked;ckSave(d);}t.closest('tr').classList.toggle('done',t.checked);ckCounts();}
+});
+render();
+</script>
+</body>
+</html>
